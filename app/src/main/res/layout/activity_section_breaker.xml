@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".SectionBreakerActivity">
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customSubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/customSubHeader">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieView"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_fileName="section_face_lottie.json"
+            app:lottie_speed="1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTagLine"
+            style="@style/Text32RegularBlackStyle"
+            android:layout_below="@+id/lottieView"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_minus4sdp" />
+
+
+        <RelativeLayout
+            android:id="@+id/llTakeTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnAdd"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClock"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:src="@drawable/ic_bg_brown_watch"
+                android:tint="@color/color_dark_grey" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBottomTagLine"
+                style="@style/Text12RegularDarkGreyStyle"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imgClock" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAdd"
+            style="@style/Button15RegularButtonPurpleStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_32sdp"
+            android:text="@string/continue_"
+            android:textColorHint="@color/color_white" />
+    </RelativeLayout>
+</RelativeLayout>

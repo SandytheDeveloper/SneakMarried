@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llHeaderView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnLeft"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_minus4sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/dr_ic_left" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTitle"
+            style="@style/Text15RegularBrownStyle"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textAlignment="center"
+            android:textColor="@color/color_black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLeftForSneak"
+            style="@style/Text12RegularGrayStyle"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textAlignment="center"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/llButtonsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llSkipAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:paddingVertical="@dimen/_2sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtSkipAll"
+                    style="@style/Text12RegularGrayStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skip_all"
+                    android:textColor="@color/color_grey"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_9sdp"
+                    android:layout_height="@dimen/_9sdp"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:backgroundTint="@color/color_grey"
+                    android:src="@drawable/dr_ic_skip" />
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCross"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/dr_ic_cross"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_gravity="center"
+        android:indeterminate="false"
+        android:max="11"
+        android:progress="0"
+        android:progressDrawable="@drawable/dr_progressbar" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@color/color_light_grey"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llProgress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtPageNO"
+        style="@style/Text10RegularGrayStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/color_dark_grey" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtMainTitle"
+        style="@style/Text35RegularBlackStyle"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_minus5sdp"
+        android:gravity="start"
+        android:padding="@dimen/_12sdp"
+        android:visibility="gone" />
+
+</LinearLayout>

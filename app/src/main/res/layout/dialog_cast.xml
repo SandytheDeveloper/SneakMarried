@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMainDialogView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_20sdp">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLocation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottomView"
+        android:layout_below="@id/llSearch"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:nestedScrollingEnabled="true"
+        android:visibility="visible"
+        tools:listitem="@layout/raw_collage_dialog" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlBottomView"
+        android:layout_below="@id/llSearch"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/llAddNewView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/ic_add_brown" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Text16RegularBlackStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:text="@string/add_new" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_20sdp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeaderTitle"
+            style="@style/Text12RegularBlackStyle"
+            android:layout_width="wrap_content"
+            android:gravity="start"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="Select your settle plan" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnCancel"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/dr_ic_drop_black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTopView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlHeader">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtChooseReligion"
+            style="@style/Text10RegularPurpleStyle"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_1sdp"
+            android:text="@string/choose_religion_to_add_here"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rlSelectedView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtChooseReligion"
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCitySuggestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:itemCount="3"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSuggestion"
+        style="@style/Text12RegularDarkGreyStyle"
+        android:layout_width="wrap_content"
+        android:textColor="@color/color_black"
+        android:layout_below="@+id/rlTopView"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="visible" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTextSuggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSuggestion"
+        tools:itemCount="3"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp" />
+
+
+    <RelativeLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvTextSuggestion"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical">
+
+
+        <!-- Search Bar-->
+        <RelativeLayout
+            android:id="@+id/rlSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dr_bg_search"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:paddingVertical="@dimen/_4sdp"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/dr_ic_search" />
+
+
+            <ImageView
+                android:id="@+id/imgLeft"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/dr_ic_blue_back"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSearch"
+                style="@style/Text10RegularPurpleStyle"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_toStartOf="@+id/txtClear"
+                android:background="@null"
+                android:hint="@string/search_here"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtClear"
+                style="@style/Text10RegularGrayStyle"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:text="@string/clear"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <!-- No Data View-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNoDataFound"
+            style="@style/Text12RegularGrayStyle"
+            android:layout_below="@id/rlSearch"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:text="@string/no_results_found"
+            android:visibility="gone" />
+
+
+        <!-- Other Selection Options-->
+        <LinearLayout
+            android:id="@+id/llOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlSearch"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/dr_ic_unfill_black_circle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtLocation"
+                style="@style/Text20BlackStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/other" />
+        </LinearLayout>
+
+
+        <!-- Other Typing View-->
+        <LinearLayout
+            android:id="@+id/llCast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtOtherTitle"
+                style="@style/Text12RegularDarkGreyStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="@string/type_your_caste_here" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/dr_bg_other"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSurName"
+                    style="@style/Text20RegularPurpleStyle"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_toStartOf="@+id/txtTitleClear"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890() "
+                    android:focusable="true"
+                    android:fontFamily="@font/satoshi_regular"
+                    android:gravity="start"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:paddingVertical="@dimen/_15sdp"
+                    android:textColorHint="@color/color_grey" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTitleClear"
+                    style="@style/Text12RegularGrayStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_15sdp"
+                    android:text="@string/clear"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDialogContinue"
+            style="@style/Button15RegularButtonPurpleStyle"
+            android:layout_marginBottom="@dimen/_32sdp"
+            android:enabled="false"
+            android:text="@string/strcontinue"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+

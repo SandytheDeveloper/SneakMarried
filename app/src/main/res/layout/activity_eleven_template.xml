@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".template.ElevenTemplateActivity">
+
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/customHeader">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/llPrivacy"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/dr_ic_shield" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/infoMessage"
+                style="@style/Text10SatoshiMediumGrayStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/this_information_will_not_be_nshown_to_references" />
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtQuestion"
+            style="@style/Text32RegularBlackStyle"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_below="@id/llPrivacy"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_minus4sdp"
+            android:text="@string/how_tall_are_you" />
+
+
+        <!--DATE SELECTOR-->
+        <RelativeLayout
+            android:id="@+id/pickerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dr_bg_picker"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/month"
+                    android:textColor="@color/color_black" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:text="@string/day"
+                    android:textColor="@color/color_black" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/year"
+                    android:textColor="@color/color_black" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llMain"
+                android:layout_marginTop="@dimen/_5sdp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerInParent="true"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:src="@drawable/dr_bg_white" />
+
+
+                <DatePicker
+                    android:id="@+id/date_Picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:theme="@style/AppTheme.DatePicker" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+        <!--LENGHT SELECTOR-->
+        <RelativeLayout
+            android:id="@+id/lengthPickerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dr_bg_picker"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/llHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="@string/feet"
+                    android:textColor="@color/color_black" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="@string/inches"
+                    android:textColor="@color/color_black" />
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlTimePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llHeight"
+                android:layout_marginTop="@dimen/_20sdp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerInParent="true"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:src="@drawable/dr_bg_white" />
+                <!-- <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+
+
+                />-->
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/llPicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+
+                    android:paddingHorizontal="@dimen/_20sdp">
+
+
+                    <NumberPicker
+                        android:id="@+id/numberPickerFeet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:theme="@style/AppTheme.DatePicker" />
+
+
+                    <NumberPicker
+                        android:id="@+id/numberPickerInches"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:theme="@style/AppTheme.DatePicker" />
+                </LinearLayout>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <!--TIME SELECTOR-->
+        <RelativeLayout
+            android:id="@+id/timeView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_310sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dr_bg_picker"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/llMainTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/hours"
+                    android:textColor="@color/color_black" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblMinutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:text="@string/minutes"
+                    android:textColor="@color/color_black" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:gravity="start" />
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llMainTime"
+                android:layout_marginTop="@dimen/_5sdp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerInParent="true"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:src="@drawable/dr_bg_white" />
+
+
+                <TimePicker
+                    android:id="@+id/timePicker"
+                    style="@style/AppTheme.TimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:descendantFocusability="blocksDescendants"
+                    android:theme="@style/AppTheme.DatePicker"
+                    android:timePickerMode="spinner" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+        <include
+            android:id="@+id/buttonView"
+            layout="@layout/bottom_view"/>
+
+
+        <!-- <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        style="@style/Button15RegularButtonPurpleStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_32sdp"
+        android:background="@drawable/dr_bg_btn_light"
+        android:text="@string/strcontinue"
+        android:textColor="@color/white"
+        android:visibility="visible" />-->
+    </RelativeLayout>
+</RelativeLayout>
+

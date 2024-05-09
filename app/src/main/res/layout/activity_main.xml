@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_toStartOf="@+id/rlCustomProfile"
+            android:paddingStart="@dimen/_15sdp"
+            android:visibility="gone"
+            tools:ignore="RtlSymmetry"
+            tools:itemCount="1"
+            tools:listitem="@layout/raw_question_bank_items" />
+
+        <RelativeLayout
+            android:id="@+id/rlCustomProfile"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_20sdp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imgCustomProfile"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="@dimen/_3sdp"
+                app:placeholderImage="@color/color_base_grey"
+                app:roundAsCircle="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtUserInits"
+                style="@style/Text14BlueStyle"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/traditionalandexceptionalfont_regular"
+                android:gravity="center"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgAadharError"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignStart="@id/rlCustomProfile"
+            android:layout_marginStart="@dimen/_minus5sdp"
+            android:src="@drawable/dr_ic_error"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llProgress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"
+        android:layout_below="@+id/topView"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:id="@+id/fragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/customFooter"
+        android:layout_below="@id/llProgress" />
+
+    <com.commonfriend.custom.CustomFooter
+        android:id="@+id/customFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/rlReviewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_blue"
+        android:paddingHorizontal="@dimen/_25sdp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgOptions"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_38sdp"
+            android:src="@drawable/dr_ic_menu_dot" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_50sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_18sdp"
+                android:src="@drawable/dr_ic_under_review" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtReviewTitle"
+                style="@style/Text24PurpleStyle"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/traditionalandexceptionalfont_regular"
+                android:text="@string/under_review"
+                android:textColor="@color/color_white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtReviewDescription"
+                style="@style/Text10RegularGrayStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableStart="@drawable/dr_ic_reminder"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableTint="@color/color_white"
+                android:gravity="center"
+                android:text="@string/profile_under_review"
+                android:textColor="@color/color_white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtReviewSubDescription"
+                style="@style/Text10RegularGrayStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:gravity="center"
+                android:text="@string/expected_wait_time_under_48_hours"
+                android:textColor="@color/color_white" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEditProfile"
+            style="@style/Button12RegularPurpleStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/dr_bg_btn"
+            android:backgroundTint="@color/color_white"
+            android:stateListAnimator="@null"
+            android:text="@string/edit_profile"
+            android:textColor="@color/color_black" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBanView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_red"
+        android:paddingHorizontal="@dimen/_25sdp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_50sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:src="@drawable/dr_ic_ban" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBanTitle"
+                style="@style/Text24PurpleStyle"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/traditionalandexceptionalfont_regular"
+                android:text="@string/account_locked"
+                android:textColor="@color/color_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:src="@drawable/dr_ic_reminder"
+                    android:visibility="gone"
+                    android:tint="@color/color_white" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtBanDescription"
+                    style="@style/Text10RegularGrayStyle"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/color_white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDeleteAccount"
+            style="@style/Button12RegularPurpleStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/dr_bg_btn"
+            android:backgroundTint="@color/color_white"
+            android:stateListAnimator="@null"
+            android:text="@string/delete_account"
+            android:textColor="@color/color_black" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

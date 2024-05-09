@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".SplashActivity">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgGm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_centerInParent="true"
+        android:paddingHorizontal="@dimen/_25sdp"
+        android:src="@drawable/dr_ic_common_friend"
+        android:visibility="gone" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="splash_screen_lottie.json"
+        app:lottie_speed="1" />
+
+
+    <LinearLayout
+        android:id="@+id/llBeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="@dimen/_100sdp">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerEffect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:shimmer_auto_start="true"
+            app:shimmer_base_alpha="1"
+            app:shimmer_dropoff="0.6"
+            app:shimmer_duration="100"
+            android:visibility="gone"
+            app:shimmer_highlight_alpha="0.1"
+            app:shimmer_repeat_delay="1500">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:background="@drawable/dr_bg_btn_light"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="TooDeepLayout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Text12RegularPurpalStyle"
+                    android:layout_width="wrap_content"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:text="Beta"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

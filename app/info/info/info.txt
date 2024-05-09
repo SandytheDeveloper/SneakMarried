@@ -1,0 +1,3 @@
+Key store password - common
+Key alias - common
+Key password - 123456

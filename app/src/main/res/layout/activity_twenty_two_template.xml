@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".template.TwentyTwoTemplateActivity">
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonView"
+        android:layout_below="@id/customHeader">
+
+        <LinearLayout
+            android:id="@+id/llPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/dr_ic_shield" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/infoMessage"
+                style="@style/Text10SatoshiMediumGrayStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/this_information_will_not_be_nshown_to_references" />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtQuestion"
+            style="@style/Text32RegularBlackStyle"
+            android:layout_below="@id/llPrivacy"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_minus4sdp"
+            android:text="@string/where_do_you_plan_to_settle" />
+
+        <RelativeLayout
+            android:id="@+id/rlSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtQuestion"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/dr_gold_circle"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:visibility="visible">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtLocationDialog"
+                style="@style/EditTextLayout"
+                android:layout_toStartOf="@+id/imgRight"
+                android:gravity="start"
+                android:hint="@string/add"
+                android:textColorHint="@color/color_black"
+                app:hintTextColor="@color/color_black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtLocationName"
+                    style="@style/Text20ColorBlackStyle"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:paddingBottom="@dimen/_minus5sdp"
+                    android:textColorHint="@color/color_grey" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgRight"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/dr_ic_drop_black" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSelectionList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlSpinner"
+            tools:itemCount="1"
+            tools:listitem="@layout/raw_add_qualification" />
+
+
+
+      <!--  <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            style="@style/Button15RegularButtonPurpleStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_32sdp"
+            android:hint="@string/strcontinue"
+            android:textColor="@color/white"
+            android:visibility="visible" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTypeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/customHeader"
+        android:layout_above="@+id/buttonView"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llTypePrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/dr_ic_shield" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/infoMessage"
+                style="@style/Text10SatoshiMediumGrayStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/visible_to_your_recommendations_only" />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTypeQuestion"
+            style="@style/Text32RegularBlackStyle"
+            android:layout_below="@id/llTypePrivacy"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_minus4sdp"
+            android:text="@string/what_was_the_type_of_degree" />
+
+        <!-- single text 3 option in text view-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMcqSingleOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTypeQuestion"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:visibility="visible" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <include
+        android:id="@+id/buttonView"
+        layout="@layout/bottom_view"/>
+
+
+</RelativeLayout>

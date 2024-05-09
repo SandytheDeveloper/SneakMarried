@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPostGraduation"
+            style="@style/Text15NormalPurpleStyle"
+            android:layout_width="wrap_content"
+            android:text="@string/post_graduation"
+            android:textColor="@color/color_black" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgChangeEducationDetails"
+            style="@style/ImageSize20Style"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_6sdp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCourse"
+                style="@style/Text10RegularGrayStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@string/course"
+                android:textColor="@color/color_dark_grey" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtCourse"
+                    style="@style/Text15RegularBlackStyle"
+                    android:layout_width="wrap_content"
+                    android:text="@string/bca_computer_science"
+                    android:textSize="@dimen/_16sdp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCource"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txtCourse"
+                    android:layout_alignTop="@id/txtCourse"
+                    android:layout_alignEnd="@id/txtCourse"
+                    android:layout_alignBottom="@id/txtCourse"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/color_light_grey"
+                    app:cardCornerRadius="@dimen/_4sdp"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView style="@style/LockedImageSize12Style" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@color/color_light_grey" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCollege"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Text10RegularGrayStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@string/college"
+                android:textColor="@color/color_dark_grey" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtCollege"
+                    style="@style/Text15RegularBlackStyle"
+                    android:layout_width="wrap_content"
+                    android:text="@string/delhi_university"
+                    android:textSize="@dimen/_16sdp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCollege"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txtCollege"
+                    android:layout_alignTop="@id/txtCollege"
+                    android:layout_alignEnd="@id/txtCollege"
+                    android:layout_alignBottom="@id/txtCollege"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/color_light_grey"
+                    app:cardCornerRadius="@dimen/_4sdp"
+                    app:cardElevation="0dp">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView style="@style/LockedImageSize12Style" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@color/color_light_grey" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

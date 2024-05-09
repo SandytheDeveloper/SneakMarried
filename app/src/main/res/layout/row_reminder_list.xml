@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMain"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/color_red"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="0dp">
+
+
+    <RelativeLayout
+        android:id="@+id/llReminderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_9sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_9sdp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtReminder"
+            style="@style/Text18RegularBlackStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/traditionalandexceptionalfont_regular"
+            android:gravity="start"
+            android:padding="@dimen/_1sdp"
+            android:text="Complete Aadhar verification"
+            android:textColor="@color/color_white" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgContinue"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_below="@+id/txtReminder"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/dr_ic_forward"
+            android:tint="@color/color_white" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblInfoReminder"
+            style="@style/Text10RegularGrayStyle"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_alignParentBottom="true"
+            android:maxLines="2"
+            android:layout_toStartOf="@+id/imgContinue"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:text="You cannot get introduced without"
+            android:textColor="@color/color_white" />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btnAction"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_45sdp"
+    android:drawableStart="@drawable/dr_ic_shield"
+    app:iconTint="@color/color_blue"
+    android:fontFamily="@font/font_satoshi_medium"
+    android:textAllCaps="false"
+    android:textColor="@color/color_blue"
+    app:backgroundTint="@color/color_base_grey"
+    app:cornerRadius="@dimen/_5sdp"
+    android:textSize="@dimen/_13sdp"
+    app:iconGravity="textStart" />

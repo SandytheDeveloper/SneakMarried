@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlImageProfile"
+    android:layout_width="@dimen/_115sdp"
+    android:layout_height="@dimen/_133sdp"
+    android:layout_margin="@dimen/_5sdp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_122sdp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:scaleType="centerCrop"
+        app:placeholderImage="@drawable/ic_bg_photo_album_dark"
+        app:placeholderImageScaleType="fitXY"
+        app:roundAsCircle="false"
+        app:roundedCornerRadius="@dimen/_8sdp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imgProfileOverLay"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_122sdp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:scaleType="centerCrop"
+        app:placeholderImage="@drawable/dr_ic_red_filter"
+        app:placeholderImageScaleType="fitXY"
+        android:visibility="gone"
+        app:roundAsCircle="false"
+        app:roundedCornerRadius="@dimen/_8sdp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/placeHolderImage"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imgProfile"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtStatus"
+            style="@style/Text8RegularPurpleStyle"
+            android:layout_width="wrap_content"
+            android:background="@drawable/dr_photo_album_circle"
+            android:enabled="false"
+            android:fontFamily="@font/font_satoshi_medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_3sdp"
+            android:text="@string/display_picture"
+            android:textColor="@color/color_grey"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnEdit"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/dr_ic_edit_photo" />
+
+</RelativeLayout>

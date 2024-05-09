@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/color_green"
+        app:cardCornerRadius="@dimen/_20sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlTopView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtContributed"
+                    style="@style/Text12RegularWhitStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hash_contributed"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_8sdp"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtNumber"
+                    style="@style/Text12RegularWhitStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="#23"
+                    android:textSize="@dimen/_8sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llPrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:src="@drawable/dr_ic_shield"
+                        android:tint="@color/color_white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/shieldMessage"
+                        style="@style/Text10SatoshiMediumGrayStyle"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="Visible if both have answered"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llPrivacy"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/transparent_white"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="0dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtQuestionTitle"
+                            style="@style/Text10WhiteStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_7sdp"
+                            android:layout_marginVertical="@dimen/_4sdp"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/_8sdp"
+                            tools:text="Your Rights vs. Their Good" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtQuestions"
+                        style="@style/Text32RegularWhiteStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="0.8"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_20sdp"
+                        tools:text="Do you lean more towards conservative views or towards liberal perspectives in politics?" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:layout_marginBottom="@dimen/_25sdp">
+
+                <LinearLayout
+                    android:id="@+id/llButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_37sdp"
+                        app:cardBackgroundColor="@color/transparent_"
+                        app:cardCornerRadius="@dimen/_9sdp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/color_white"
+                        app:strokeWidth="1dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_12sdp">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/imgYesMyProfile"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:visibility="gone"
+                                app:placeholderImage="@color/color_base_grey"
+                                app:roundAsCircle="true" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtYes"
+                                style="@style/Text14RegularWhitStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="RelativeOverlap"
+                                tools:text="@string/yes" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imgYesVisibilityButton"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                app:roundAsCircle="true"
+                                app:srcCompat="@drawable/dr_ic_visible" />
+
+                        </RelativeLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_37sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:cardBackgroundColor="@color/transparent_"
+                        app:cardCornerRadius="@dimen/_9sdp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/color_white"
+                        app:strokeWidth="1dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_12sdp">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/imgNoMyProfile"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:visibility="gone"
+                                app:placeholderImage="@color/color_base_grey"
+                                app:roundAsCircle="true" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtNo"
+                                style="@style/Text14RegularWhitStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="RelativeOverlap"
+                                tools:text="@string/no" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imgNoVisibilityButton"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                app:roundAsCircle="true"
+                                app:srcCompat="@drawable/dr_ic_hidden" />
+
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOnChangeButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/btnChangeYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_37sdp"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:id="@+id/btnChangeNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_37sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/lastBottomSpace"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:visibility="gone" />
+
+</LinearLayout>

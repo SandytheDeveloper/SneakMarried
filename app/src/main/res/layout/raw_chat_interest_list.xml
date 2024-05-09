@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvData"
+    android:layout_width="@dimen/_200sdp"
+    android:layout_height="@dimen/_220sdp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginEnd="@dimen/_20sdp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:cardBackgroundColor="@color/color_base_grey"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="0dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+
+            <RelativeLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/llName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtName"
+                        style="@style/Text20RegularBlackStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/txtName"
+                        android:layout_alignTop="@id/txtName"
+                        android:layout_alignEnd="@id/txtName"
+                        android:layout_alignBottom="@id/txtName"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/color_white"
+                        app:cardCornerRadius="@dimen/_4sdp"
+                        app:cardElevation="0dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/LockedBlackImageSize12Style" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtageLocation"
+                    style="@style/Text10RegularDarkGreyStyle"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/llName"
+                    android:gravity="center"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:textColor="@color/color_black"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:id="@+id/llTimerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/btnChatViewProfile"
+                    android:gravity="center_horizontal|center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_clock"
+                        android:tint="@color/color_red" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtTime"
+                        style="@style/Text10RegularDarkGreyStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:lineSpacingExtra="0dp"
+                        android:text="5 days ago"
+                        android:textColor="@color/color_red"
+                        android:textSize="@dimen/_9sdp" />
+
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnChatViewProfile"
+                    style="@style/SmallPurpleButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:stateListAnimator="@null"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@string/view_profile"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:id="@+id/rlImageView"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_gravity="top|center_horizontal"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rlProfilePicView"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                app:placeholderImage="@color/color_light_grey"
+                app:placeholderImageScaleType="fitXY"
+                app:roundAsCircle="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtUserInits"
+                style="@style/Text32RegularWhiteStyle"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:padding="0dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_35sdp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llLikeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlProfilePicView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_minus11sdp"
+            android:background="@drawable/dr_light_purple_graystroke_bg"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnLike"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:src="@drawable/ic_favorite" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtLikeCount"
+                style="@style/Text12RegularPurpalStyle"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_minus2sdp"
+                android:gravity="top"
+                android:text="23" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

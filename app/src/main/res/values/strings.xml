@@ -1,0 +1,395 @@
+<resources>
+    <string name="app_name">Common Friend</string>
+    <string name="i_will_send_you_a_text_with_verification_code">I will send you a text with a verification code.</string>
+    <string name="to_verify_your_phone_number_we_ve_sent_you">To verify your phone number, I have sent you</string>
+    <string name="digit_otp_at_91_9560505818">a 4 digit OTP at: </string>
+    <string name="edit">Edit?</string>
+    <string name="didn_t_get_a_code">Didn\'t get a code?</string>
+    <string name="add">Add</string>
+    <string name="gender">Gender</string>
+    <string name="new_">New</string>
+
+
+    <string name="non_vegetarian">Non Vegetarian</string>
+    <string name="search_here">Search here</string>
+    <string name="which_one_is_you">Which one is you?</string>
+    <string name="choose_option">Choose Option</string>
+    <string name="reselect_image">ReSelect Image</string>
+    <string name="checkInternet">CheckInternet</string>
+    <string name="profile">Profile</string>
+    <string name="checklist">Checklist</string>
+    <string name="photo">photo!</string>
+    <string name="code">code.</string>
+
+
+    <!-- Welcome Screen-->
+
+
+    <!-- Introduction Screen-->
+
+
+    <string name="no">No</string>
+    <string name="next">Next</string>
+    <string name="close">close</string>
+    <string name="Religion">Religion</string>
+    <string name="successful">successful!</string>
+
+    <!--    For FaceBook Sdk-->
+    <string name="facebook_app_id">1371673643743124</string>
+    <string name="fb_login_protocol_scheme">fb1371673643743124</string>
+    <string name="facebook_client_token">e775e7682c75de124c7098f75e7e2af6</string>
+
+    <!--    For bugsnag ApiKey-->
+    <string name="bugsnag_api_key">7a5705a9297a775f30c3c94862a07f65</string>
+
+    <!--    For Location ApiKey-->
+    <string name="location_api_key">AIzaSyCwokoXzd5Ox8rjwk1LkQQLzIEnrXxhtN8</string>
+
+    <!-- Basic Information Screen-->
+    <string name="complete_your_profile">Complete Your Profile</string>
+    <!-- Fragments-->
+    <string name="yes">Yes</string>
+    <string name="yes_">yes</string>
+    <string name="full_time">Full-Time</string>
+    <string name="where_are_you_located">Where are you \nlocated?</string>
+    <string name="mumbai">Mumbai</string>
+    <string name="strcontinue">Continue</string>
+    <string name="done_">Done</string>
+
+
+    <string name="how_tall_are_you">How tall \nare you?</string>
+    <string name="what_religion_do_you_follow">What religion \ndo you follow?</string>
+
+
+    <string name="hindu">Hindu</string>
+
+
+    <string name="where_do_you_plan_to_settle">Where do you \n plan to settle?</string>
+    <string name="what_is_your_net_worth">What is \nyour net worth? </string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="feet">Feet</string>
+    <string name="inches">Inches</string>
+
+
+    <string name="let_s_get_you_a_profile_photo">Let’s get you a\nprofile photo!</string>
+    <string name="add_photos">Add photos to your album to start connecting and receiving requests!</string>
+    <string name="display_picture">Display picture</string>
+    <string name="display_picture_">Display Picture</string>
+    <string name="enter_your_verification_code">Enter your \nverification code.</string>
+    <string name="what_s_your_mobile_number">What’s your \nmobile number?</string>
+    <string name="verification_successful">Verification \nsuccessful!</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="similar">Similar</string>
+    <string name="settle_location">Settle Location</string>
+    <string name="settle_locations">Settle Locations</string>
+    <string name="more_than">"More than "</string>
+
+
+    <!--CheckInformation-->
+    <string name="born_in_bangalore_i_was">I Was Born in Bangalore, and I was brought up in New Delhi.</string>
+    <string name="office">Office</string>
+    <string name="annual_income">Annual Income</string>
+
+
+    <!--CheckReference-->
+    <string name="profile_unlocked">Profile unlocked</string>
+    <string name="enable"><u>Enable</u></string>
+    <string name="delhi_university">Delhi University</string>
+    <string name="course">Course</string>
+    <string name="special_certification">Special Certificate</string>
+    <string name="post_graduation">Post Graduation</string>
+    <string name="bca_computer_science">BCA, Computer science</string>
+    <string name="college">College</string>
+
+
+    <!-- Raw Working Out -->
+
+
+    <!--Raw Do this number-->
+
+
+    <!--education information activity-->
+
+
+    <!--Reference Activity-->
+    <string name="education">Education</string>
+
+
+    <!--Chet Activity-->
+    <string name="save">Save</string>
+
+
+    <string name="please_select_image">Please Select First Image </string>
+    <string name="photo_album">Photo Album</string>
+    <string name="photo_album_">photo album</string>
+    <string name="my_photo_album">My photo album</string>
+    <string name="suggested_religion">Suggested religion</string>
+    <string name="clear">Clear</string>
+
+
+    <string name="priority">Priority</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="finances">Finances</string>
+    <string name="notifications">Notifications</string>
+    <string name="chat_introductions">Chat Introductions</string>
+    <string name="change_phone_no">Change Number</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="drag_to_reorder">Drag to reorder</string>
+    <string name="almost_there">Almost there!</string>
+    <string name="there_">there!</string>
+    <string name="make_display_picture">Make display picture</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="choose_religion_to_add_here">Choose religion to add here</string>
+    <string name="no_results_found">No Results Found</string>
+    <string name="type_your_caste_here">Type your caste here</string>
+    <string name="get_introduced">Get Introduced</string>
+    <string name="all_notifications">All Notifications</string>
+    <string name="messages">Messages</string>
+    <string name="claimed_income">Claimed Income</string>
+
+    <!-- personal basic information activity-->
+
+
+    <!-- about associate basic information activity-->
+    <string name="by_logging_in_you_agree_to_out_term_privacy_policy">By login in you agree to my <u>\'Term\' and \'Privacy Policy\'</u></string>
+    <string name="term_">\'Term\'</string>
+    <string name="privacy_policy">\'Privacy Policy\'</string>
+
+
+    //Splash Screen
+    <string name="continue_with_mobile_number">Continue with mobile number</string>
+    <string name="message">Message</string>
+
+    <string name="opinions">Opinions</string>
+    <string name="connections">Connections</string>
+    <string name="reminders">Reminders</string>
+    <string name="net_worth_only_visible_to_you">Net Worth (Only visible to you)</string>
+    <string name="enter_your_mobile_number">Enter your mobile number</string>
+    <string name="enter_country">Enter country</string>
+    <string name="okay">Okay</string>
+    <string name="reject_and_report">Reject and report</string>
+    <string name="reject">Reject</string>
+    <string name="view_profile">View Profile</string>
+    <string name="unmatch">Unmatch</string>
+    <string name="any">any</string>
+    <string name="Any">Any</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="privacy">Privacy</string>
+    <string name="feedback">Feedback</string>
+    <string name="logout">Logout</string>
+    <string name="pause_search">Pause Search</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="skip">Skip</string>
+    <string name="please_check_internet_connection">Please check internet connection</string>
+    <string name="add_new">Add New</string>
+    <string name="more_steps_to_go">more steps to get started!</string>
+    <string name="this_information_will_not_be_nshown_to_references">This information will not be\nshown to references</string>
+    <string name="detecting">Detecting…</string>
+    <string name="industry">Industry</string>
+    <string name="gotra_">gotra</string>
+    <string name="answer_or_skip">Answer or Skip</string>
+    <string name="question_of_the_day">Question of the day</string>
+    <string name="hide_this_answer"><u>Hide this answer?</u></string>
+    <string name="the_answer_is_hidden"><u>This answer is hidden. Unhide?</u></string>
+    <string name="recommendations">Recommendations</string>
+    <string name="select_contact">Select contact</string>
+    <string name="are_you_sure_you_want_to_unhide_this">Are you sure you want to unhide this?</string>
+    <string name="are_you_sure_you_want_to_hide_this">Are you sure you want to hide this?</string>
+    <string name="cancel">Cancel</string>
+    <string name="send_request">Send Request</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="what_is_your_relationship">What is your relationship</string>
+    <string name="you_can_not_add_your_self">You can not add yourself</string>
+    <string name="Culture">Culture</string>
+    <string name="Relationship_status">Relationship Status</string>
+    <string name="Disability">Disability</string>
+    <string name="Settle_location">Settle Location</string>
+    <string name="ideal_age">Ideal age</string>
+    <string name="ideal_height">Ideal height</string>
+    <string name="Profession">Profession</string>
+    <string name="unlock"><u>Unlock</u></string>
+    <string name="Eating_habits">Eating habits</string>
+    <string name="_18_years">18 years</string>
+    <string name="_5_6_inches">5’6 inches</string>
+    <string name="choose_browser">Select browser</string>
+    <string name="no_browser_app_available">There is no browser on your mobile.</string>
+    <string name="reference_found">Reference found!</string>
+    <string name="questions">Questions</string>
+    <string name="this_person_has_seen_your_answer">This person has seen your answer</string>
+    <string name="height_">Height</string>
+    <string name="it_ll_take_a_while_to_for_us_to_verify_your_aadhar_card">It’ll take a while to for\nus to verify your aadhar card.</string>
+    <string name="acknowledgement">Acknowledgement</string>
+    <string name="add_details"><u>Add details</u></string>
+    <string name="unpause_search">Unpause Search</string>
+    <string name="you_have_been_referred">You have been referred</string>
+    <string name="this_stays_between_us">This stays between us!</string>
+    <string name="psst_between_nyou_and_me">Psst! Between you and me..</string>
+    <string name="why_did_you_reject_them">Why did you reject them?</string>
+    <string name="why_did_you_reject_him">Why did you reject him?</string>
+    <string name="why_did_you_reject_her">Why did you reject her?</string>
+    <string name="continue_">Continue</string>
+    <string name="zodiac">Zodiac</string>
+    <string name="loading">Loading..</string>
+    <string name="as_error_has_occurred">As error\nhas occurred?</string>
+    <string name="occurred">occurred?</string>
+    <string name="common_friend_left_the_group">Common Friend left the group</string>
+    <string name="days_left">days left</string>
+    <string name="day_left">day left</string>
+    <string name="intro">Intro</string>
+    <string name="other">Other</string>
+    <string name="loading1">Loading......................</string>
+    <string name="loading2">Loading...........</string>
+    <string name="loading3">Loading................</string>
+    <string name="loading4">Loading...........</string>
+    <string name="loading5">Loading...................</string>
+    <string name="send_them_a_message">Send them a message</string>
+    <string name="please_enter_your_aadhar_card_number">Please enter your aadhar card number</string>
+    <string name="enter_your_aadhar_card_number">Enter your aadhar card number</string>
+    <string name="we_will_send_you_an_otp_to_mobile_number_nregistered_with_this_aadhar_number">We will send you an OTP to mobile number \nregistered with this aadhar number.</string>
+    <string name="let_s_get_your_nprofile_verified">Let’s get your\nprofile verified.</string>
+    <string name="a_6_digit_otp_has_been_sent_on_your_mobile_nnumber_registered_with_your_aadhar_card">A 6-digit OTP has been sent on your mobile \nnumber registered with your Aadhar Card</string>
+    <string name="low_resolution">Low-quality photo!</string>
+    <string name="low">Low</string>
+
+    <string name="filter_all">all</string>
+    <string name="filter_new">new</string>
+    <string name="filter_sent">sent</string>
+    <string name="filter_received_">received</string>
+    <string name="filter_unlocked">unlocked</string>
+    <string name="filter_locked">locked</string>
+    <string name="filter_introduced">introduced</string>
+    <string name="filter_missed">missed</string>
+    <string name="filter_request_sent">request sent</string>
+    <string name="filter_request_received">request received</string>
+    <string name="welcome_back">Your Progress!</string>
+    <string name="never_married">never married</string>
+    <string name="if_required_i_shall_use_this_number_nto_get_in_touch">If required, I shall use this number\nto get in touch.</string>
+    <string name="drag_or_reorder_the_attributes_below_based_on_your_priority">Drag or reorder the attributes below based on your priority.</string>
+    <string name="change_picture">Change picture</string>
+    <string name="visible_to_your_recommendations_only">Visible to your recommendations only</string>
+    <string name="this_photo_is_too_fuzzy_please_send_us_a_sharper_higher_quality_image">This photo is too fuzzy. Please send us a sharper, higher-quality image.</string>
+    <string name="line_of_work">Line of work</string>
+    <string name="title">Title</string>
+    <string name="food_preference">Food Preference</string>
+    <string name="terms_of_use">"Terms Of Use "</string>
+    <string name="rules">Rules</string>
+    <string name="your_reasons">Your reasons</string>
+    <string name="_100_words_left">100 words left</string>
+    <string name="upload_now">Upload Now</string>
+    <string name="later">Later</string>
+    <string name="answer_now">Answer Now</string>
+    <string name="introduction">Introduction</string>
+    <string name="share_your_opinions">Share Your Opinions</string>
+    <string name="answer_a_minimum_of">Answer a minimum of</string>
+    <string name="questions_to_start_connecting_and_receiving_requests">questions to start connecting and receiving requests!</string>
+    <string name="you_will_not_receive_new_recommendations">You will not receive new recommendations</string>
+    <string name="you_cannot_get_introduced_without_ncreating_a_photo_album">You cannot get introduced without\ncreating a photo album</string>
+    <string name="account_locked">Account locked!</string>
+    <string name="request_under_review">Request under review</string>
+    <string name="viewed_by">Viewed by</string>
+    <string name="invitations">Invitations</string>
+    <string name="know_someone_who_nwants_to_get_married">Know someone who\nwants to get married?</string>
+    <string name="refer_me">Refer me</string>
+    <string name="different">Different</string>
+    <string name="want_to_get_in_touch">Want to get in touch?</string>
+    <string name="submit">Submit</string>
+    <string name="under_review">Under review!</string>
+    <string name="profile_under_review">Profile under review.</string>
+    <string name="withdraw_application">Withdraw Application</string>
+    <string name="expected_wait_time_under_48_hours">Expected wait time: Under 48 hours.</string>
+    <string name="you_re_new_here_nno_new_chats_navailable">You’re new here!\nNo new chats\navailable.</string>
+    <string name="no_new_people_nnear_you">No new people\nnear you.</string>
+    <string name="similar_photo">Similar photo!</string>
+    <string name="this_photo_is_already_added_to_your_album_lets_try_something_different">This photo is already added to your album. Lets try something different.</string>
+    <string name="photo_too_wide">Photo too wide!</string>
+    <string name="this_photo_is_too_wide_please_crop_it_and_share_a_more_square_image">This photo is too wide. Please crop it and share a more square image.</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="your_can_be_edited_only_once_be_sure_before_you_confirm_this_change">Your %1$s can be edited only once! Be sure before you confirm this change.</string>
+    <string name="about_net_worth">About Net worth</string>
+    <string name="family_net_worth_is_what_you_and_your_family_owns">Family net worth is what you and your family owns (like a home, investments, savings) minus what you owe (like mortgages, loans, credit card debt).\nRest assured, this information will remain confidential between us. This information is not shared with your match.</string>
+    <string name="just_fyi">Just FYI</string>
+    <string name="your_photos_will_undergo_verification_by_me_only">Your photos will undergo verification by me. Only if they meet our guidelines will your profile be approved. Uploading fake or irrelevant photos will be a wasted effort.</string>
+    <string name="discovering_profiles">Discovering Profiles</string>
+    <string name="swipe_left_or_right_to_discovery_profiles_swiping_does_not_accept_or_reject_the_profile">Swipe left or right to discovery profiles. Swiping does not accept or reject the profile.</string>
+    <string name="photo_too_tall">Photo too tall!</string>
+    <string name="this_photo_is_too_tall_please_crop_it_and_share_a_more_square_image">This photo is too tall. Please crop it and share a more square image.</string>
+    <string name="not_available">Not Available</string>
+    <string name="all">All</string>
+    <string name="hidden">Hidden</string>
+    <string name="answered">Answered</string>
+    <string name="unanswered">Unanswered</string>
+    <string name="common_friend_is_typing">Common Friend is typing..</string>
+    <string name="about_your_profile">About your profile</string>
+    <string name="enter_manually"><u>Enter manually</u></string>
+    <string name="_2024_common_friend_all_rights_reserved">© 2024 Common Friend | All Rights Reserved</string>
+    <string name="unlock_profile">Unlock Profile</string>
+    <string name="no_new_nrecommendations">No new\nrecommendations!</string>
+    <string name="no_new_chats_navailable">No new chats\navailable!</string>
+    <string name="click_the_attributes_below_based_on_your_priority">Click the attributes below based on your priority.</string>
+    <string name="incomplete_profile">Incomplete Profile!</string>
+    <string name="there_is_some_information_that_is_required">There is some information that is required from your side. Complete your profile to start connecting and receiving requests.</string>
+    <string name="complete_now">Complete now</string>
+    <string name="contribute_a_question_">Contribute a\nquestion?</string>
+    <string name="i_promise_to_review_your_question_nbut">Your question will be reviewed for sure,\nbut publication is not guaranteed.</string>
+    <string name="contribute_a_question">Contribute a question</string>
+    <string name="if_published_it_will_be_marked_as">If published, it will be marked as \'contributed\'\nwithout giving you credits, to respect your privacy.</string>
+    <string name="what_is_the_question">What is the question?</string>
+    <string name="what_is_option_a">What is Option A?</string>
+    <string name="what_is_option_b">What is Option B?</string>
+    <string name="contribute">Contribute</string>
+    <string name="contributed">Contributed</string>
+    <string name="are_you_sure_you_want_to_unmatch">Are you sure you want to unmatch?</string>
+    <string name="firebase_path_key">common_friend_s04051999n14011999s14022002</string>
+    <string name="common_friend">Common friend</string>
+    <string name="what_was_the_type_of_degree">What was the type of degree?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="coins">Coins</string>
+    <string name="available_coins">Available coins</string>
+    <string name="refundable_coins">Refundable coins</string>
+    <string name="buy_coins">Buy Coins</string>
+    <string name="spent">Spent</string>
+    <string name="earnt">Earnt</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="hash_contributed"># Contributed</string>
+    <string name="dont_need_an_introduction">Dont need an Introduction</string>
+    <string name="prefer_to_get_introduced">Prefer to get introduced?</string>
+    <string name="do_you_want_me_to_introduce_you_over">Do you want me to introduce you over a group, or are you up for starting the conversation yourself? Let me know! Remember, you can switch it up later in the \'Settings\' section.</string>
+    <string name="accept_request">Accept Request</string>
+    <string name="preview">Preview</string>
+    <string name="your_matches">Your Matches</string>
+    <string name="typing">typing...</string>
+    <string name="notification_provider_name">CommonFriend</string>
+    <string name="hide_question">Hide Question</string>
+    <string name="thats_not_possible">Thats not possible!</string>
+    <string name="once_answered_changing_the_answer_is_not_possible">Once answered, changing the answer is not possible.</string>
+    <string name="have_any_feedback">Have any feedback?</string>
+    <string name="once_answered_changing_the_answer_is_not_possible_the_best_">Once answered, changing the answer is not possible. The best you could do is \'hide\' it!</string>
+    <string name="common_friend_id">64073c9bb97d2f57c44eb0a7</string>
+    <string name="don_t_need_an_introduction">Don\'t need an Introduction</string>
+    <string name="get_introduced_">Get introduced</string>
+    <string name="its_alright_to_get_in_touch_on_whatsapp">Its alright to get in touch on WhatsApp</string>
+    <string name="days">Days</string>
+    <string name="seconds">Seconds</string>
+    <string name="enter_early_access_code">Enter early access code</string>
+    <string name="abcdefghijklmnopqrstuvwxyz0123456789">ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="abcdefghi">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</string>
+    <string name="photo_album_incomplete">Photo Album incomplete</string>
+    <string name="your_photo_album_is_incomplete_upload">Your Photo album is incomplete. Upload your album to start connecting and receiving requests.</string>
+    <string name="add_photos_">Add photos</string>
+    <string name="type_your_college_name_here">Type your college name here</string>
+    <string name="change_now">Change now</string>
+    <string name="skip_all">Skip all</string>
+
+
+    <string name="get_stream_api_key">fapgw466me76</string>
+    <string name="prefer_not_to_say">Prefer not to say</string>
+    <string name="prefer_not_to_say_id">prefer_not_to_say_id</string>
+
+    <string name="branch_io_key">key_live_lFdKmhI88XU93TanxSN8oofltqdLwKuB</string>
+
+</resources>

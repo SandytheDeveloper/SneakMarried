@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlCaption"
+    android:layout_width="@dimen/_240sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dr_bg_white_grey_circle"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/rlClose"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:rotation="180"
+            android:src="@drawable/dr_ic_drop_black"
+            android:contentDescription="@string/close" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnWithDraw"
+            style="@style/Text14RegularBlackStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:singleLine="true"
+            android:text="@string/withdraw_application"
+            android:textSize="@dimen/_20sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnLogout"
+            style="@style/Text14RegularBlackStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="@string/logout"
+            android:textSize="@dimen/_20sdp" />
+    </LinearLayout>
+</LinearLayout>

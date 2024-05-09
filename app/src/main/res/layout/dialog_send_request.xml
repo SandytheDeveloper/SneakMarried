@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMainDialogView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dr_bg_btn_light"
+    android:padding="@dimen/_20sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlBottomView"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/dr_ic_dummy_face" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMobileNumber"
+            style="@style/Text35RegularBlackStyle"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:text="Add associate\nrelationship." />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            android:visibility="visible"
+            android:overScrollMode="never"
+            tools:itemCount="1"
+            tools:listitem="@layout/row_innercircle_list" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:drawableTop="@drawable/dr_ic_shield"
+            android:text="Rules of the extended family\nto be mentioned here"
+            android:textAlignment="center" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancelRequest"
+            style="@style/Button15RegularBlueStyle"
+            android:layout_below="@+id/txtInfo"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:text="@string/cancel"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSendRequest"
+            style="@style/Button12RegularPurpleStyle"
+            android:layout_below="@+id/btnCancelRequest"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:text="@string/send_request"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+

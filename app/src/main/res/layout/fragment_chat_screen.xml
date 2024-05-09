@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ChatScreenFragment">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerEffect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/custom_chat_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <io.getstream.chat.android.ui.feature.channels.list.ChannelListView
+        android:id="@+id/channelListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:streamUiChannelListBackgroundColor="@color/color_white"
+        app:streamUiChannelHeight="@dimen/_60sdp"
+        app:streamUiChannelTitleTextFont="@font/traditionalandexceptionalfont_regular"
+        app:streamUiLastMessageTextFont="@font/font_satoshi_medium"
+        app:streamUiLastMessageDateTextFont="@font/font_satoshi_medium"
+        app:streamUiUnreadMessageCounterTextFont="@font/font_satoshi_medium"
+        app:streamUiChannelTitleTextSize="@dimen/_16sdp"
+        app:streamUiChannelTitleTextStyle="normal"
+        app:streamUiChannelDeleteEnabled="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChannelList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_15sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="3"
+        tools:listitem="@layout/row_message_list" />
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btnCreate"-->
+<!--        android:layout_width="@dimen/_80sdp"-->
+<!--        android:layout_height="@dimen/_50sdp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:text="create"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentEnd="true"/>-->
+
+    <LinearLayout
+        android:id="@+id/llNoChats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:src="@drawable/dr_ic_no_chat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Text40RegularBlackStyle"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_minus5sdp"
+            android:text="@string/no_new_chats_navailable"
+            android:textColor="@color/color_grey"
+            android:textSize="@dimen/_26sdp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

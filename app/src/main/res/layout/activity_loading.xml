@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_base_grey"
+    tools:context=".LoadingActivity">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:placeholderImage="@color/color_base_grey" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:cardBackgroundColor="@color/color_base_grey"
+        app:cardCornerRadius="@dimen/_150sdp"
+        app:strokeColor="@color/color_blue"
+        app:strokeWidth="@dimen/_1sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLoading"
+            style="@style/Text40RegularBlackStyle"
+            android:layout_gravity="center"
+            android:fontFamily="@font/satoshi_regular"
+            android:text="@string/loading"
+            android:textSize="@dimen/_35sdp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

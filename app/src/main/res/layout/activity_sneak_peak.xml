@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".SneakPeakActivity">
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPrevious"
+        style="@style/Text12RegularBlackStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/customHeader"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/dr_bg_light_grey_circle"
+        android:stateListAnimator="@null"
+        android:text="Previous"
+        android:textAllCaps="false"
+        android:textColor="@color/color_black" />
+
+    <FrameLayout
+        android:id="@+id/secondView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnNext"
+        android:layout_below="@+id/btnPrevious"
+        android:layout_marginHorizontal="@dimen/_10sdp" />
+
+    <FrameLayout
+        android:id="@+id/firstView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnNext"
+        android:layout_below="@+id/btnPrevious"
+        android:layout_marginHorizontal="@dimen/_10sdp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        style="@style/Text12RegularBlackStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/dr_bg_light_grey_circle"
+        android:stateListAnimator="@null"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:textColor="@color/color_black" />
+
+</RelativeLayout>

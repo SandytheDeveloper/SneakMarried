@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:background="@drawable/dr_gray_stroke_bg"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/_3sdp">
+
+
+    <RelativeLayout
+        android:id="@+id/rlTopView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_10sdp">
+
+        <View
+            android:id="@+id/ignoreView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_50sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtRelation"
+            style="@style/Text12RegularDarkGreyStyle"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/_5sdp"
+            android:text="Father" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnEditRelation"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/txtRelation"
+            android:paddingTop="@dimen/_5sdp"
+            android:src="@drawable/dr_ic_edit_text" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/dr_bg_purple"
+            android:drawableEnd="@drawable/ic_pen_edit_description"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/color_white"
+            android:fontFamily="@font/satoshi_regular"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="Extended Family"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTopView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_toStartOf="@id/txtBlock"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_3sdp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtName"
+            style="@style/Text24RegularBlackStyle"
+            android:layout_width="wrap_content"
+            android:paddingTop="0dp"
+            android:gravity="start"
+            android:maxLines="2"
+            android:paddingStart="0dp"
+            android:paddingBottom="0dp"
+            android:text="Ravi Chada"
+            android:singleLine="false" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNumber"
+            style="@style/Text10RegularGrayStyle"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:gravity="center_vertical"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBlock"
+        style="@style/Text14RegularBlackStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/llText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:drawableStart="@drawable/ic_minus"
+        android:fontFamily="@font/satoshi_regular"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:text="Remove"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+
+
+

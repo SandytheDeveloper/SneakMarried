@@ -1,0 +1,636 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GetMarried" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_blue</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_blue</item>
+        <item name="colorSecondaryVariant">@color/color_blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/color_white</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowSplashScreenIconBackgroundColor" tools:ignore="NewApi">@color/color_white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="EditTextParentStyle" parent="TextParentStyle">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="strokeColor">@color/color_black</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:textColorHint">@color/color_grey</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="TextParentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:lineSpacingExtra">@dimen/_1sdp</item>
+        <item name="android:paddingStart">@dimen/_5sdp</item>
+        <item name="android:paddingEnd">@dimen/_5sdp</item>
+        <item name="android:paddingTop">@dimen/_5sdp</item>
+        <item name="android:paddingBottom">@dimen/_5sdp</item>
+    </style>
+
+
+    <!-- Spinner Style-->
+
+    <style name="TextParentStyleView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/font_satoshi_medium</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:lineSpacingExtra">@dimen/_1sdp</item>
+    </style>
+
+    <!--EDIT TEXT LAYOUT STYLE-->
+    <style name="EditTextShapeAppearance">
+        <item name="cornerSize">@dimen/_5sdp</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">@dimen/_5sdp</item>
+    </style>
+
+
+    <style name="EditTextLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearance">@style/EditTextShapeAppearance</item>
+        <item name="backgroundColor">@color/color_white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="boxBackgroundColor">@color/color_white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintEnabled">true</item>
+        <item name="android:elevation">@dimen/_30sdp</item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="singleLine">false</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+    </style>
+
+
+    <!--Gray(Regular)TextParentStyleView-->
+    <style name="Text12RegularGrayStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/color_grey</item>
+        <item name="android:gravity">start</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <style name="Text10RegularGrayStyle" parent="Text12RegularGrayStyle">
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+
+    <style name="Text09RegularGrayStyle" parent="Text12RegularGrayStyle">
+        <item name="android:textSize">@dimen/_9sdp</item>
+    </style>
+
+    <style name="Text09RegularBlackStyle" parent="Text12RegularGrayStyle">
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="Text09BoldBlackStyle" parent="Text12RegularGrayStyle">
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="fontFamily">@font/satoshi_bold</item>
+    </style>
+
+    <style name="Text20RegularGrayStyle" parent="Text12RegularGrayStyle">
+        <item name="android:textSize">@dimen/_20sdp</item>
+    </style>
+
+    <style name="Text10RegularGrayStylePadding" parent="Text12RegularGrayStyle">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/color_dark_grey</item>
+        <item name="android:paddingStart">@dimen/_5sdp</item>
+    </style>
+
+
+    <!--Gray(Regular)TextParentStyle-->
+    <style name="Text14RegularGrayStyle" parent="TextParentStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/color_grey</item>
+        <item name="android:gravity">start</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <style name="Text12RegularWhitStyle" parent="Text14RegularGrayStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text14RegularWhitStyle" parent="Text14RegularGrayStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+
+    <!--Purple(Regular)-->
+
+    <style name="Text14RegularPurpleStyle" parent="Text40RegularBlueStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="fontFamily">@font/traditionalandexceptionalfont_regular</item>
+    </style>
+
+    <style name="Text16RegularPurpleStyle" parent="Text40RegularBlueStyle">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <style name="Text16RegularBlackStyle" parent="TextParentStyle">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+
+    <style name="Text18RegularPurpleStyle" parent="Text40RegularBlueStyle">
+        <item name="android:textSize">@dimen/_18sdp</item>
+        <item name="fontFamily">@font/traditionalandexceptionalfont_regular</item>
+    </style>
+
+    <style name="Text15RegularPurpleStyle" parent="Text40RegularBlueStyle">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text15NormalPurpleStyle" parent="Text15RegularPurpleStyle">
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <style name="Text10RegularPurpleStyle" parent="Text40RegularBlueStyle">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <style name="Text8RegularPurpleStyle" parent="Text40RegularBlueStyle">
+        <item name="android:textSize">@dimen/_8sdp</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+
+    <!--Purple(Regular)EditTextParentStyle-->
+    <style name="Text16BlueStyle" parent="Text20BlackStyle">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/color_blue</item>
+    </style>
+
+    <style name="Text20BlackStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="Text24PurpleStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_24sdp</item>
+        <item name="android:textColor">@color/color_blue</item>
+    </style>
+
+    <style name="Text22PurpleStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_22sdp</item>
+        <item name="android:textColor">@color/color_blue</item>
+    </style>
+
+    <style name="Text20RegularPurpleStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/color_blue</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+
+    <!--Brown(Bold)-->
+
+
+    <!--Brown(Regular)EditTextParentStyle-->
+
+
+    <!--Satoshi Medium Gray-->
+    <style name="Text10SatoshiMediumGrayStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:textColor">@color/color_grey</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <!--Brown(Regular)TextParentStyleView-->
+
+
+    <style name="Text12RegularPurpalStyle" parent="Text12RegularDarkGreyStyle">
+        <item name="android:textColor">@color/color_blue</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text13RegularDarkGreyStyle" parent="Text10RegularDarkGreyStyle">
+        <item name="android:textSize">@dimen/_13sdp</item>
+    </style>
+
+    <style name="Text14RegularBrownStyle" parent="Text10RegularDarkGreyStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/manrope_regular</item>
+    </style>
+
+    <style name="Text15RegularBrownStyle" parent="Text10RegularDarkGreyStyle">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="fontFamily">@font/traditionalandexceptionalfont_regular</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!--Black(Regular)TextParentStyle-->
+    <style name="Text40RegularBlackStyle" parent="TextParentStyle">
+        <item name="android:textSize">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/traditionalandexceptionalfont_regular</item>
+    </style>
+
+    <style name="Text35RegularBlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_35sdp</item>
+    </style>
+
+    <style name="Text10RegularBlackStyle" parent="TextParentStyle">
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+
+
+    <style name="Text12RegularBlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <style name="Text12BoldBlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="fontFamily">@font/satoshi_bold</item>
+    </style>
+
+    <style name="Text14BlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="fontFamily">@font/traditionalandexceptionalfont_regular</item>
+    </style>
+
+    <style name="Text24RegularBlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_24sdp</item>
+    </style>
+
+    <style name="Text20RegularBlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_20sdp</item>
+    </style>
+
+    <style name="Text14RegularBlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="Text32RegularBlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_28sdp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="Text26RegularBlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_26sdp</item>
+    </style>
+
+    <style name="Text18RegularBlackStyle" parent="Text40RegularBlackStyle">
+        <item name="android:textSize">@dimen/_18sdp</item>
+    </style>
+
+
+    <!--ColorBlack(Regular)TextParentStyleView-->
+    <style name="Text15RegularBlackStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:paddingTop">@dimen/_5sdp</item>
+        <item name="android:paddingBottom">@dimen/_5sdp</item>
+        <item name="fontFamily">@font/traditionalandexceptionalfont_regular</item>
+    </style>
+
+
+    <!--Black(Regular)EditTextParentStyle-->
+    <style name="EditText25RegularBlackStyle" parent="EditTextParentStyle">
+        <item name="android:textSize">@dimen/_23sdp</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:gravity">start</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+
+    <!--White(Regular)TextParentStyle-->
+    <style name="Text32RegularWhiteStyle" parent="TextParentStyle">
+        <item name="android:textSize">@dimen/_32sdp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/traditionalandexceptionalfont_regular</item>
+    </style>
+
+    <style name="Text14WhiteStyle" parent="Text32RegularWhiteStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <style name="Text10WhiteStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+
+    <!--Red(Regular)-->
+
+
+    <!--Orange(Regular)-->
+
+
+    <!--Green(Regular)-->
+
+
+    <!--massage_text(Regular)-->
+
+
+    <!--Yellow(Regular)-->
+
+
+    <!-- Button Style-->
+    <style name="ButtonParentStyle" parent="TextParentStyle">
+        <item name="android:background">@drawable/dr_bg_btn_next</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textColorHint">@color/color_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="elevation">0dp</item>
+        <item name="fontFamily">@font/manrope_regular</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:padding">@dimen/_18sdp</item>
+    </style>
+
+
+    <style name="Button15SmallRegularPurpleStyle" parent="Button15RegularBlueStyle">
+        <item name="android:background">@drawable/dr_small_purple_circle</item>
+        <item name="android:textColor">@color/color_blue</item>
+    </style>
+
+    <style name="ButtonSelectedStyle" parent="Button15RegularBlueStyle">
+        <item name="android:background">@drawable/dr_bg_small_btn</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="SmallPurpleButtonStyle" parent="Button15RegularBlueStyle">
+        <item name="android:background">@drawable/dr_bg_small_btn</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Button15RegularButtonPurpleStyle" parent="ButtonParentStyle">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:textColorHint">@color/button_text_color</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+        <item name="android:background">@drawable/button_background_selector</item>
+        <item name="android:layout_marginBottom">@dimen/_30sdp</item>
+    </style>
+
+
+    <style name="Button12RegularPurpleStyle" parent="ButtonParentStyle">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textColorHint">@color/color_blue</item>
+        <item name="fontFamily">@font/generalsans_regular</item>
+        <item name="elevation">0dp</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="bottomButtonStyle" parent="ButtonParentStyle">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textColorHint">@color/color_white</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+        <item name="android:background">@drawable/dr_blue_circle</item>
+        <item name="elevation">0dp</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_30sdp</item>
+    </style>
+
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="AppBottomSheetDialogDimTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppLottieDialogTheme" parent="Theme.Design.Light.NoActionBar">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">shortEdges</item>
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <style name="TransparentBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.9</item>
+    </style>
+
+
+    <style name="AppTheme.DatePicker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/color_black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColorSecondary">@android:color/transparent</item>
+        <item name="shapeAppearanceMediumComponent">@drawable/dr_bg_btn_next</item>
+    </style>
+
+    <style name="AppTheme.TimePicker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColorSecondary">@android:color/transparent</item>
+    </style>
+
+    <!-- Animation for dialog box -->
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/dr_bg_cardview</item>
+    </style>
+
+    <!-- Animation for dialog box -->
+
+    <style name="ShapeAppearance">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSize">@dimen/_8sdp</item>
+        <item name="cornerRadius">@dimen/_8sdp</item>
+    </style>
+
+
+    <!--Pop up menu theme-->
+
+    <style name="ImageSize20Style">
+        <item name="android:layout_width">@dimen/_20sdp</item>
+        <item name="android:layout_height">@dimen/_20sdp</item>
+        <item name="android:src">@drawable/dr_ic_edit_text</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="LockedImageSize12Style">
+        <item name="android:layout_width">@dimen/_14sdp</item>
+        <item name="android:layout_height">@dimen/_14sdp</item>
+        <item name="android:src">@drawable/dr_ic_lock</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">@dimen/_4sdp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="LockedBlackImageSize12Style">
+        <item name="android:layout_width">@dimen/_14sdp</item>
+        <item name="android:layout_height">@dimen/_14sdp</item>
+        <item name="android:src">@drawable/dr_ic_black_lock</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">@dimen/_4sdp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="Text26BlackStyle" parent="Text26RegularBlackStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">@dimen/_24sdp</item>
+    </style>
+
+    <style name="Text24BlackStyle">
+        <item name="android:textSize">@dimen/_24sdp</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:gravity">start</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingStart">@dimen/_5sdp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="fontFamily">@font/traditionalandexceptionalfont_regular</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+<!--    FINAL-->
+
+    <style name="Text13RegularRedStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:textColor">@color/color_red</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+        <item name="android:textFontWeight" tools:ignore="NewApi">700</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="EditText25RegularblackStyle" parent="EditTextParentStyle">
+        <item name="android:textSize">@dimen/_25sdp</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+        <item name="android:inputType">number</item>
+        <item name="android:layout_marginStart">@dimen/_5sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_5sdp</item>
+    </style>
+
+    <style name="Button15RegularBlueStyle" parent="ButtonParentStyle">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+        <item name="android:background">@drawable/dr_purple_circle</item>
+        <item name="android:layout_marginBottom">@dimen/_40sdp</item>
+    </style>
+
+    <style name="Text40RegularBlueStyle" parent="TextParentStyle">
+        <item name="android:textSize">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/color_blue</item>
+        <item name="fontFamily">@font/natural_script</item>
+        <item name="android:textColorHint">@color/color_blue</item>
+    </style>
+
+    <style name="Text14BlueStyle" parent="Text40RegularBlueStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <style name="Text10RegularDarkGreyStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/color_dark_grey</item>
+        <item name="fontFamily">@font/font_satoshi_medium</item>
+    </style>
+
+    <style name="Text20ColorBlackStyle" parent="Text10RegularDarkGreyStyle">
+        <item name="android:textSize">@dimen/_18sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="Text12RegularDarkGreyStyle" parent="Text10RegularDarkGreyStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text12RegularColorBlackStyle" parent="Text10RegularDarkGreyStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="MyToolbarTitleTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:fontFamily">@font/traditionalandexceptionalfont_regular</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+    </style>
+
+<!--    Italic Font-->
+
+    <style name="Text12ItalicGrayStyle" parent="TextParentStyleView">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/color_grey</item>
+        <item name="android:gravity">start</item>
+        <item name="fontFamily">@font/satoshi_medium_italic</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".template.TwentyFourTemplateActivity">
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonView"
+        android:layout_below="@id/customHeader">
+
+        <LinearLayout
+            android:id="@+id/llPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/dr_ic_shield" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/infoMessage"
+                style="@style/Text10SatoshiMediumGrayStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/this_information_will_not_be_nshown_to_references" />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtQuestion"
+            style="@style/Text32RegularBlackStyle"
+            android:layout_below="@id/llPrivacy"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_minus4sdp"
+            android:text="@string/what_is_your_net_worth" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtIncome"
+            style="@style/Text20ColorBlackStyle"
+            android:layout_width="wrap_content"
+            android:layout_above="@+id/rlSeekBar"
+            android:layout_below="@+id/txtQuestion"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnDecrease"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/dr_ic_decrease" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:layout_toStartOf="@+id/btnIncrease"
+                android:layout_toEndOf="@+id/btnDecrease"
+                android:stepSize="1"
+                android:valueFrom="0"
+                android:valueTo="100"
+                app:haloColor="@android:color/transparent"
+                app:labelBehavior="gone"
+                app:thumbColor="@color/color_blue"
+                app:thumbRadius="@dimen/_10sdp"
+                app:tickVisible="false"
+                app:trackColor="@color/color_light_grey"
+                app:trackHeight="@dimen/_8sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnIncrease"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/dr_ic_increase" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/buttonView"
+        layout="@layout/bottom_view" />
+
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true"
+        android:drawable="@drawable/dr_ic_fill_black_circle" /> <!-- enabled -->
+    <item android:state_selected="false"
+        android:drawable="@drawable/dr_ic_unfill_black_circle" /> <!-- enabled -->
+    <item android:drawable="@drawable/dr_ic_unfill_black_circle" /> <!-- default -->
+</selector>

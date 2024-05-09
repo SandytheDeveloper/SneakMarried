@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/color_base_grey"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeaderTitle"
+            style="@style/Text10RegularDarkGreyStyle"
+            android:layout_width="match_parent"
+            android:drawableStart="@drawable/dr_ic_sneak"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="start"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_8sdp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:gravity="center"
+                android:paddingTop="@dimen/_5sdp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    app:placeholderImage="@color/color_light_grey"
+                    app:placeholderImageScaleType="fitXY"
+                    app:roundAsCircle="true" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtUserPic"
+                    style="@style/Text14WhiteStyle"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtName"
+                        style="@style/Text20RegularBlackStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:gravity="start"
+                        android:lineSpacingExtra="@dimen/_minus4sdp"
+                        android:padding="@dimen/_1sdp"
+                        android:singleLine="true" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/txtName"
+                        android:layout_alignTop="@id/txtName"
+                        android:layout_alignEnd="@id/txtName"
+                        android:layout_alignBottom="@id/txtName"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/color_white"
+                        app:cardCornerRadius="@dimen/_4sdp"
+                        app:cardElevation="0dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/LockedBlackImageSize12Style" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtageLocation"
+                    style="@style/Text10RegularDarkGreyStyle"
+                    android:layout_width="wrap_content"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:textColor="@color/color_black"
+                    android:visibility="visible"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    style="@style/Button15SmallRegularPurpleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_1sdp"
+                    android:text="Cancel"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnViewProfile"
+            style="@style/SmallPurpleButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/_1sdp"
+            android:text="View Profile"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

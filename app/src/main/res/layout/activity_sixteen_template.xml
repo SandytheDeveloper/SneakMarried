@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".template.SixteenTemplateActivity">
+
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/customHeader">
+
+        <LinearLayout
+            android:id="@+id/llPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/dr_ic_shield" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/infoMessage"
+                style="@style/Text10SatoshiMediumGrayStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/this_information_will_not_be_nshown_to_references" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtQuestion"
+            style="@style/Text32RegularBlackStyle"
+            android:layout_below="@id/llPrivacy"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_minus4sdp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLocationDialog"
+            style="@style/EditTextLayout"
+            android:layout_below="@+id/txtQuestion"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/dr_gold_circle"
+            android:gravity="start"
+            android:hint="@string/detecting"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            app:hintTextColor="@color/color_black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtLocationName"
+                style="@style/Text20ColorBlackStyle"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:gravity="start"
+                android:paddingBottom="@dimen/_minus5sdp"
+                android:singleLine="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/btnAddManually"
+            style="@style/Text12BoldBlackStyle"
+            android:layout_below="@+id/txtLocationDialog"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:text="@string/enter_manually"
+            android:textColor="@color/color_blue"
+            android:visibility="gone" />
+
+
+        <include
+            android:id="@+id/buttonView"
+            layout="@layout/bottom_view" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

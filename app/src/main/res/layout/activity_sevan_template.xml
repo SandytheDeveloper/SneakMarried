@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".template.SevanTemplateActivity">
+
+        <com.commonfriend.custom.CustomHeader
+            android:id="@+id/customHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/llPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customHeader"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/dr_ic_shield" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/infoMessage"
+            style="@style/Text10SatoshiMediumGrayStyle"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="@string/this_information_will_not_be_nshown_to_references" />
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtQuestion"
+        style="@style/Text32RegularBlackStyle"
+        android:layout_below="@id/llPrivacy"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_minus4sdp"
+        android:text="@string/where_are_you_located" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMcqSingleOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonView"
+        android:layout_below="@+id/txtQuestion"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:visibility="visible" />
+
+
+
+    <include
+        android:id="@+id/buttonView"
+        layout="@layout/bottom_view"/>
+
+   <!-- <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        style="@style/Button15RegularButtonPurpleStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_32sdp"
+        android:background="@drawable/dr_bg_btn_light"
+        android:enabled="false"
+        android:text="@string/strcontinue"
+        android:textColor="@color/white"
+        android:visibility="visible" />-->
+
+</RelativeLayout>

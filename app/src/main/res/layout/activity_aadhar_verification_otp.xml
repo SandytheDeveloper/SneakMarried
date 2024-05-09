@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".AadharVerificationOtpActivity">
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtVerification"
+        style="@style/Text35RegularBlackStyle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:lineSpacingExtra="@dimen/_minus11sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:text="@string/enter_your_verification_code" />
+
+
+    <RelativeLayout
+        android:id="@+id/otpNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_8sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Text13RegularDarkGreyStyle"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="@string/a_6_digit_otp_has_been_sent_on_your_mobile_nnumber_registered_with_your_aadhar_card"
+            android:textAlignment="center"
+            android:textSize="@dimen/_12sdp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llOtp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:weightSum="6">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtOtp1"
+            style="@style/EditText25RegularblackStyle"
+            android:layout_weight="1"
+            android:background="@drawable/dr_ic_bg_otp"
+            android:maxLength="1"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtOtp2"
+            style="@style/EditText25RegularblackStyle"
+            android:layout_weight="1"
+            android:background="@drawable/dr_ic_bg_otp"
+            android:maxLength="1"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtOtp3"
+            style="@style/EditText25RegularblackStyle"
+            android:layout_weight="1"
+            android:background="@drawable/dr_ic_bg_otp"
+            android:maxLength="1"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtOtp4"
+            style="@style/EditText25RegularblackStyle"
+            android:layout_weight="1"
+            android:background="@drawable/dr_ic_bg_otp"
+            android:maxLength="1"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtOtp5"
+            style="@style/EditText25RegularblackStyle"
+            android:layout_weight="1"
+            android:background="@drawable/dr_ic_bg_otp"
+            android:maxLength="1"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtOtp6"
+            style="@style/EditText25RegularblackStyle"
+            android:layout_weight="1"
+            android:background="@drawable/dr_ic_bg_otp"
+            android:maxLength="1"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTerms"
+        style="@style/Text10RegularGrayStyle"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:singleLine="true"
+        android:text="@string/by_logging_in_you_agree_to_out_term_privacy_policy" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_34sdp"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnResendOtp"
+            style="@style/Text13RegularRedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:text="@string/didn_t_get_a_code" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_20sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dr_gold_circle"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_12sdp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/EditTextLayout"
+            android:id="@+id/txtLayout"
+            android:layout_toStartOf="@+id/imgDelete"
+            android:gravity="start"
+            android:textColorHint="@color/color_grey"
+            app:hintTextColor="@color/color_black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCollegeName"
+                style="@style/Text20ColorBlackStyle"
+                android:background="@null"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:gravity="start"
+                android:paddingBottom="@dimen/_minus5sdp"
+                android:textColorHint="@color/color_grey" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/dr_ic_delete" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAddNew"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dr_bg_gray_circle"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:visibility="visible"
+        android:paddingVertical="@dimen/_17sdp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgAdd"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_add_button"
+            android:scaleType="fitCenter" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Text20ColorBlackStyle"
+            android:id="@+id/addNewLayout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/imgAdd"
+            android:gravity="start"
+            android:text="@string/add"
+            android:textSize="@dimen/_18sdp"
+            app:hintTextColor="@color/color_black"/>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

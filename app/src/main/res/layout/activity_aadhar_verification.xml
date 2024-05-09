@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".AadharVerificationActivity">
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customHeader"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_26sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMobileNumber"
+            style="@style/Text35RegularBlackStyle"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="@dimen/_minus11sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:text="@string/let_s_get_your_nprofile_verified" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSMSWhatsUp"
+            style="@style/Text12RegularDarkGreyStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@string/please_enter_your_aadhar_card_number" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp">
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtNumber"
+                style="@style/EditText25RegularBlackStyle"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:background="@null"
+                android:fontFamily="@font/satoshi_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_your_aadhar_card_number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="14"
+                android:textColorHint="@color/color_grey"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgContinue"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:src="@drawable/dr_ic_forward"
+                android:tint="@color/color_light_grey" />
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@color/color_edit_text_view" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtVerificationCode"
+            style="@style/Text12RegularGrayStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@string/we_will_send_you_an_otp_to_mobile_number_nregistered_with_this_aadhar_number"
+            android:textSize="@dimen/_11sdp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_60sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/dr_ic_shield"
+            android:tint="@color/color_grey" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shieldMessage"
+            style="@style/Text10SatoshiMediumGrayStyle"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="@string/this_information_will_not_be_nshown_to_references"
+            android:textColor="@color/color_grey" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cvNewProfile"
+    app:cardBackgroundColor="@color/color_base_grey"
+    android:layout_marginHorizontal="@dimen/_20sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_15sdp">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:paddingTop="@dimen/_5sdp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                app:roundAsCircle="true"
+                app:placeholderImage="@color/color_light_grey"
+                app:placeholderImageScaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/llLikeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgProfile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_minus11sdp"
+                android:background="@drawable/ic_whitebg_purple_stroke"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnLike"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:src="@drawable/ic_like" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtLikeCount"
+                    style="@style/Text12RegularPurpalStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_minus2sdp"
+                    android:gravity="top"
+                    android:text="0" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtIsLocked"
+                style="@style/Text20RegularBlackStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="start"
+                android:background="@drawable/dr_locked_bg"
+                android:drawableStart="@drawable/ic_lock_profile"
+                android:lineSpacingExtra="@dimen/_minus4sdp"
+                android:padding="@dimen/_1sdp"
+                android:visibility="visible"
+                android:singleLine="true"
+                android:textColor="@color/color_white"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtName"
+                style="@style/Text20RegularBlackStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="1dp"
+                android:gravity="start"
+                android:lineSpacingExtra="@dimen/_minus4sdp"
+                android:padding="@dimen/_1sdp"
+                android:singleLine="true"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtageLocation"
+                style="@style/Text10RegularDarkGreyStyle"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:visibility="visible" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNewProfileViewProfile"
+                style="@style/SmallPurpleButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_1sdp"
+                android:text="@string/view_profile"
+                android:visibility="visible" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                style="@style/Button15SmallRegularPurpleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_1sdp"
+                android:text="Cancel"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

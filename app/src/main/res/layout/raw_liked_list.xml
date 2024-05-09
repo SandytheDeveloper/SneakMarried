@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlCaption"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_2sdp"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_26sdp"
+        android:id="@+id/rlImage"
+        android:layout_height="@dimen/_26sdp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            app:placeholderImage="@color/color_light_grey"
+            app:roundAsCircle="true"
+            app:roundedCornerRadius="@dimen/_40sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtUserInits"
+            style="@style/Text14BlueStyle"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtName"
+        style="@style/Text14RegularBlackStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="@dimen/_16sdp"
+        android:text="Manoj Patel" />
+
+</LinearLayout>

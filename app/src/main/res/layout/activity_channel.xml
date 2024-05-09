@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:visibility="visible"
+    tools:context=".ChannelActivity">
+
+    <io.getstream.chat.android.ui.feature.messages.header.MessageListHeaderView
+        android:id="@+id/messageListHeaderView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:streamUiMessageListHeaderDefaultLabelTextSize="0dp" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/typingHeaderView"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="31dp"-->
+    <!--        android:background="#DDD"-->
+    <!--        android:gravity="center"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/messageListHeaderView" />-->
+
+    <RelativeLayout
+        android:id="@+id/rlHeaderView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:streamUiMessageListHeaderDefaultLabelTextSize="0dp">
+
+        <RelativeLayout
+            android:id="@+id/innerHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/dr_ic_left" />
+
+
+            <RelativeLayout
+                android:id="@+id/llProfile"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/imgBack">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/backgroundView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:placeholderImage="@color/color_base_grey"
+                    app:roundAsCircle="true"
+                    app:roundedCornerRadius="@dimen/_40sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtUserInits"
+                    style="@style/Text18RegularPurpleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/imgChannelProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:placeholderImage="@color/color_base_grey"
+                    app:roundAsCircle="true"
+                    app:roundedCornerRadius="@dimen/_40sdp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/imgCommonFriendProfile"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignEnd="@+id/backgroundView"
+                    android:layout_alignBottom="@+id/backgroundView"
+                    android:visibility="gone"
+                    app:actualImageResource="@drawable/ic_chat_face_with_border"
+                    app:roundAsCircle="true"
+                    app:roundingBorderWidth="@dimen/_1sdp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llNames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/imgUnmatch"
+                android:layout_toEndOf="@id/llProfile"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtChannelName"
+                    style="@style/Text14BlackStyle"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:singleLine="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTyping"
+                    style="@style/Text12ItalicGrayStyle"
+                    android:layout_width="wrap_content"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:textColor="@color/color_grey"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="gone"
+                    tools:ignore="RtlSymmetry" />
+
+                <LinearLayout
+                    android:id="@+id/llGroupNames"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtGroupNames"
+                        style="@style/Text10RegularPurpleStyle"
+                        android:layout_width="wrap_content"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:textColor="@color/color_grey"
+                        android:textSize="@dimen/_9sdp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgUnmatch"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/dr_ic_unmatch" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/innerHeader"
+            android:background="@color/color_light_grey" />
+
+    </RelativeLayout>
+
+
+    <io.getstream.chat.android.ui.feature.messages.list.MessageListView
+        android:id="@+id/messageListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/messageComposerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlHeaderView"
+        app:streamUiAvatarOnlineIndicatorEnabled="false"
+        app:streamUiMessageBackgroundColorMine="@color/color_black"
+        app:streamUiMessageBackgroundColorTheirs="@color/color_base_grey"
+        app:streamUiMessageTextColorMine="@color/color_white"
+        app:streamUiMessageTextColorTheirs="@color/color_black"
+        app:streamUiMessageTextFontMine="@font/font_satoshi_medium"
+        app:streamUiMessageTextFontTheirs="@font/font_satoshi_medium"
+        app:streamUiReadCount="false"
+        app:streamUiThreadsEnabled="false" />
+
+    <io.getstream.chat.android.ui.feature.messages.composer.MessageComposerView
+        android:id="@+id/messageComposerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_50sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:streamUiMessageComposerAttachmentsButtonVisible="false"
+        app:streamUiMessageComposerAttachmentsPickerMediaAttachmentsTabEnabled="false"
+        app:streamUiMessageComposerCommandsButtonVisible="false"
+        app:streamUiMessageComposerCommandsHandlingEnabled="false"
+        app:streamUiMessageComposerMentionsHandlingEnabled="false"
+        app:streamUiMessageComposerMessageInputTextFont="@font/font_satoshi_medium"
+        app:streamUiMessageComposerSendMessageButtonIconDrawable="@drawable/dr_ic_btn_send" />
+
+    <!--    <io.getstream.chat.android.ui.feature.messages.list.MessageListView-->
+    <!--        android:id="@+id/messageListView"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/llBottomView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/rlHeaderView"-->
+    <!--        app:streamUiCopyMessageActionEnabled="false"-->
+    <!--        app:streamUiDeleteMessageEnabled="false"-->
+    <!--        app:streamUiEditMessageEnabled="false"-->
+    <!--        app:streamUiMessageBackgroundColorMine="@color/color_black"-->
+    <!--        app:streamUiMessageBackgroundColorTheirs="@color/color_base_grey"-->
+    <!--        app:streamUiMessageTextColorMine="@color/color_white"-->
+    <!--        app:streamUiMessageTextColorTheirs="@color/color_black"-->
+    <!--        app:streamUiPinMessageEnabled="false"-->
+    <!--        app:streamUiReactionsEnabled="false"-->
+    <!--        app:streamUiReplyEnabled="false"-->
+    <!--        app:streamUiThreadsEnabled="false" />-->
+
+    <!--    <io.getstream.chat.android.ui.feature.messages.composer.MessageComposerView-->
+    <!--        android:id="@+id/messageComposerView"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:streamUiMessageComposerAttachmentsButtonVisible="false"-->
+    <!--        app:streamUiMessageComposerAttachmentsPickerMediaAttachmentsTabEnabled="false"-->
+    <!--        app:streamUiMessageComposerCommandsButtonVisible="false"-->
+    <!--        app:streamUiMessageComposerCommandsHandlingEnabled="false"-->
+    <!--        app:streamUiMessageComposerMentionsHandlingEnabled="false" />-->
+
+
+    <RelativeLayout
+        android:id="@+id/llBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtMessage"
+            style="@style/EditTextParentStyle"
+            android:layout_width="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/btnSend"
+            android:background="@drawable/chat_card_left_bg"
+            android:hint="@string/send_them_a_message"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/color_black"
+            android:textColorHint="@color/color_light_grey" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnSend"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignBottom="@+id/edtMessage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:src="@drawable/dr_ic_btn_send" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

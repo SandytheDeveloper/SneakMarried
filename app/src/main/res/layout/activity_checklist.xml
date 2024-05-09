@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    tools:context=".ChecklistActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_minus10sdp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@color/color_white"
+                app:collapsedTitleTextAppearance="@style/MyToolbarTitleTextAppearance"
+                app:expandedTitleTextAppearance="@style/Text35RegularBlackStyle"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:title="@string/checklist">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnBack"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@drawable/dr_ic_left" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--    <com.getmarried.custom.CustomHeader-->
+        <!--        android:id="@+id/customHeader"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_alignParentTop="true" />-->
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/llMainView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:visibility="visible">
+
+                <!--Relation ship status-->
+                <LinearLayout
+                    android:id="@+id/llRelationShip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgRelationLock"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/ic_gray_lock"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblRelationShip"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@+id/imgRelationLock"
+                            android:text="@string/Relationship_status" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnRelationshipStatusUnlock"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/unlock"
+                            android:textColor="@color/color_red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRelationshipList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:overScrollMode="never"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/raw_checklist" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@color/color_light_grey" />
+
+                </LinearLayout>
+
+                <!--DISABILITY-->
+                <LinearLayout
+                    android:id="@+id/llDisability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgDisabilityLock"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/ic_gray_lock"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblDisability"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@+id/imgDisabilityLock"
+                            android:text="@string/Disability" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnDisabilityUnlock"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/unlock"
+                            android:textColor="@color/color_red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDisabilityList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:overScrollMode="never"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/raw_checklist" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@color/color_light_grey" />
+
+                </LinearLayout>
+
+                <!--RELIGION-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgReligionLock"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/ic_gray_lock"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblReligion"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@id/imgReligionLock"
+                            android:text="@string/Religion" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnReligionUnlock"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/unlock"
+                            android:textColor="@color/color_red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone"
+                            tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvReligionList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:overScrollMode="never"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/raw_checklist" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@color/color_light_grey" />
+
+                </LinearLayout>
+
+                <!--Culture-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgCultureLock"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/ic_gray_lock"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblCulture"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@id/imgCultureLock"
+                            android:text="@string/Culture" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnCultureUnlock"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/unlock"
+                            android:textColor="@color/color_red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCultureList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:overScrollMode="never"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/raw_checklist" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@color/color_light_grey" />
+
+                </LinearLayout>
+
+                <!--Settle location-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblSettleLocation"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/Settle_location" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnSettleLocationUnlock"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/unlock"
+                            android:textColor="@color/color_red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/llSettleLoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/dr_bg_gray_circle"
+                        android:orientation="vertical"
+                        android:paddingVertical="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/btnUp"
+                            android:layout_width="@dimen/_14sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:src="@drawable/dr_ic_drop_black" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtSettleLocationName"
+                            style="@style/Text14RegularPurpleStyle"
+                            android:layout_marginHorizontal="@dimen/_8sdp"
+                            android:layout_toStartOf="@+id/btnUp"
+                            android:gravity="start"
+                            android:textColor="@color/color_black" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@color/color_light_grey" />
+
+                </LinearLayout>
+
+                <!--AGE-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgAgeLock"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/ic_gray_lock"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblIdealAge"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@id/imgAgeLock"
+                            android:text="@string/ideal_age" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnIdealAgeUnlock"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/unlock"
+                            android:textColor="@color/color_red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/btnDecAge"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/dr_ic_decrease" />
+
+                            <com.google.android.material.slider.Slider
+                                android:id="@+id/ageSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_2sdp"
+                                android:layout_toStartOf="@+id/btnIncAge"
+                                android:layout_toEndOf="@+id/btnDecAge"
+                                android:stepSize="1"
+                                android:valueFrom="18"
+                                android:valueTo="100"
+                                app:haloColor="@android:color/transparent"
+                                app:labelBehavior="gone"
+                                app:thumbColor="@color/color_blue"
+                                app:thumbRadius="@dimen/_10sdp"
+                                app:tickVisible="false"
+                                app:trackColor="@color/color_light_grey"
+                                app:trackHeight="@dimen/_8sdp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/btnIncAge"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/dr_ic_increase" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtAge"
+                            style="@style/Text16RegularPurpleStyle"
+                            android:gravity="center"
+                            android:text="@string/_18_years"
+                            android:textColor="@color/color_black" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@color/color_light_grey" />
+
+                </LinearLayout>
+
+                <!--HEIGHT-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgHeightLock"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/ic_gray_lock"
+                            android:visibility="gone" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblIdealHeight"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@id/imgHeightLock"
+                            android:text="@string/ideal_height" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnIdealHeightUnlock"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/unlock"
+                            android:textColor="@color/color_red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center_vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/btnDecHeight"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/dr_ic_decrease" />
+
+                            <com.google.android.material.slider.Slider
+                                android:id="@+id/heightSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_2sdp"
+                                android:layout_toStartOf="@+id/btnIncHeight"
+                                android:layout_toEndOf="@+id/btnDecHeight"
+                                android:stepSize="1"
+                                android:value="66"
+                                android:valueFrom="48"
+                                android:valueTo="107"
+                                app:haloColor="@android:color/transparent"
+                                app:labelBehavior="gone"
+                                app:thumbColor="@color/color_blue"
+                                app:thumbRadius="@dimen/_10sdp"
+                                app:tickVisible="false"
+                                app:trackColor="@color/color_light_grey"
+                                app:trackHeight="@dimen/_8sdp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/btnIncHeight"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/dr_ic_increase" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtHeight"
+                            style="@style/Text16RegularPurpleStyle"
+                            android:gravity="center"
+                            android:text="@string/_5_6_inches"
+                            android:textColor="@color/color_black" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@color/color_light_grey" />
+
+                </LinearLayout>
+
+                <!--Profession-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgProfessionLock"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/ic_gray_lock"
+                            android:visibility="gone" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblProfession"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@id/imgProfessionLock"
+                            android:text="@string/Profession" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnProfessionUnlock"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/unlock"
+                            android:textColor="@color/color_red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvProfessionList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:overScrollMode="never"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/raw_checklist" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@color/color_light_grey" />
+
+                </LinearLayout>
+
+                <!--Eating habits-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgEatingHabitsLock"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/ic_gray_lock"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblEatingHabits"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@id/imgEatingHabitsLock"
+                            android:text="@string/Eating_habits" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnEatingHabitUnlock"
+                            style="@style/Text12RegularDarkGreyStyle"
+                            android:layout_width="wrap_content"
+
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/unlock"
+                            android:textColor="@color/color_red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvEatingHabitsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:overScrollMode="never"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/raw_checklist" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@color/color_light_grey" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSave"
+                    style="@style/Button12RegularPurpleStyle"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:background="@drawable/dr_bg_btn"
+                    android:text="@string/save"
+                    android:textColor="@color/color_white" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnCross"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/dr_ic_cross" />
+
+    <LinearLayout
+        android:id="@+id/llSkipAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_2sdp"
+        android:visibility="gone"
+        tools:ignore="RelativeOverlap">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSkipAll"
+            style="@style/Text12RegularGrayStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skip_all"
+            android:textColor="@color/color_grey"
+            android:textSize="@dimen/_10sdp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:backgroundTint="@color/color_grey"
+            android:src="@drawable/dr_ic_skip" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

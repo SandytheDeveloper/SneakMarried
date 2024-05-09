@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".EditProfileActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_minus10sdp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@color/color_white"
+                app:collapsedTitleTextAppearance="@style/MyToolbarTitleTextAppearance"
+                app:expandedTitleTextAppearance="@style/Text35RegularBlackStyle"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:title="@string/edit_profile">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnBack"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@drawable/dr_ic_left" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_15sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llProfileView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:layout_constraintDimensionRatio="1:1.1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:placeholderImage="@color/color_base_grey"
+                        app:placeholderImageScaleType="fitXY"
+                        app:roundedCornerRadius="@dimen/_22sdp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/imgBackground"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:layout_constraintDimensionRatio="1:1.1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:placeholderImage="@drawable/dr_ic_edit_photo_bg"
+                        app:placeholderImageScaleType="fitXY"
+                        app:roundedCornerRadius="@dimen/_22sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgProfileFilter"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/dr_ic_red_filter"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1.1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvProfileErrors"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:overScrollMode="never"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/imgChangePhoto"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/raw_error_list" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgChangePhoto"
+                        style="@style/ImageSize20Style"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_margin="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imgProfile" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvNameErrors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:overScrollMode="never"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        app:layout_constraintBottom_toTopOf="@+id/txtName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/raw_error_list" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtName"
+                        style="@style/Text26RegularBlackStyle"
+                        android:layout_width="0dp"
+                        android:gravity="start"
+                        android:padding="0dp"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_16sdp"
+                        tools:text="Name"
+                        android:textColor="@color/color_white"
+                        app:layout_constraintBottom_toTopOf="@+id/txtAddress"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtAddress"
+                        style="@style/Text10RegularGrayStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="20dp"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_16sdp"
+                        android:textColor="@color/color_white"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
+                        app:layout_constraintStart_toStartOf="@+id/txtName" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/llInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/llHeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:gravity="center">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/ic_height" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtHeight"
+                                style="@style/Text09BoldBlackStyle"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:gravity="start" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imgEditHeight"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:src="@drawable/dr_ic_edit_text"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/ic_birthdate" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtBirthDate"
+                                style="@style/Text09BoldBlackStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:gravity="start" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imgEditBirth"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:src="@drawable/dr_ic_edit_text"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/ic_bg_divorced" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtRelationShip"
+                                style="@style/Text09BoldBlackStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:gravity="start" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imgEditRelationShip"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:src="@drawable/dr_ic_edit_text" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llDisability"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/ic_bg_disability" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtDisability"
+                                style="@style/Text09BoldBlackStyle"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:gravity="start" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imgEditDisability"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:src="@drawable/dr_ic_edit_text" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@color/color_edit_text_view" />
+
+                <!--Gender layout-->
+                <LinearLayout
+                    android:id="@+id/llGenderView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:text="@string/gender" />
+
+                    <LinearLayout
+                        android:id="@+id/llGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtGender"
+                            style="@style/Text26BlackStyle"
+                            android:layout_marginTop="@dimen/_3sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Profession layout-->
+                <LinearLayout
+                    android:id="@+id/llProfessionView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:text="@string/line_of_work" />
+
+                    <LinearLayout
+                        android:id="@+id/llProfession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtProfession"
+                            style="@style/Text26BlackStyle"
+                            android:layout_marginTop="@dimen/_3sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Designation view-->
+                <LinearLayout
+                    android:id="@+id/llDesignationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:text="@string/title" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtDesignation"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTitleErrors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:overScrollMode="never"
+                        app:layout_constraintBottom_toTopOf="@+id/txtName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/raw_error_list" />
+
+                </LinearLayout>
+
+                <!--Office view-->
+                <LinearLayout
+                    android:id="@+id/llOfficeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lblOffice"
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:layout_width="wrap_content"
+                        android:text="@string/office" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtOffice"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp" />
+
+                </LinearLayout>
+
+                <!--Industry view-->
+                <LinearLayout
+                    android:id="@+id/llIndustryView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:layout_width="wrap_content"
+                        android:text="@string/industry" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtIndustry"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp" />
+
+                </LinearLayout>
+
+
+                <!--First Album Image-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llAlbumFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_30sdp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/imgFirstAlbum"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/dr_bg_add_photo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1.1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:placeholderImageScaleType="fitXY"
+                        app:roundedCornerRadius="@dimen/_22sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgFirstAlbumFilter"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/dr_ic_red_filter"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1.1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFirstAlbumErrors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:overScrollMode="never"
+                        app:layout_constraintEnd_toStartOf="@+id/imgChangeFirstAlbum"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/raw_error_list" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgChangeFirstAlbum"
+                        style="@style/ImageSize20Style"
+                        android:layout_margin="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--income -->
+                <LinearLayout
+                    android:id="@+id/llAnnualIncome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:text="@string/annual_income" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtAnnualIncome"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp" />
+
+                </LinearLayout>
+
+                <!--Net worth view-->
+                <LinearLayout
+                    android:id="@+id/llNetWorthView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:layout_width="wrap_content"
+                        android:text="@string/net_worth_only_visible_to_you"
+                        tools:ignore="TooManyViews" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtNetWorth"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textColor="@color/color_grey" />
+
+                </LinearLayout>
+
+
+                <!--Education Details-->
+                <LinearLayout
+                    android:id="@+id/llEducation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/education" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtEducationAddDetails"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="@string/add_details"
+                        android:textColor="@color/color_red"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvEducationList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/raw_education_list" />
+
+                <!--Second Album Image-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llSecondAlbum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_30sdp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/imgSecondAlbum"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/dr_bg_add_photo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1.1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:placeholderImageScaleType="fitXY"
+                        app:roundedCornerRadius="@dimen/_22sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgSecondAlbumFilter"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/dr_ic_red_filter"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1.1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSecondAlbumErrors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:overScrollMode="never"
+                        app:layout_constraintEnd_toStartOf="@+id/imgChangeSecondAlbum"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/raw_error_list" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgChangeSecondAlbum"
+                        style="@style/ImageSize20Style"
+                        android:layout_margin="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <!--Religion-->
+                <LinearLayout
+                    android:id="@+id/llReligion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:text="@string/Religion" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtReligion"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp" />
+
+                </LinearLayout>
+
+                <!--Culture-->
+                <LinearLayout
+                    android:id="@+id/llCulture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:text="@string/Culture" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtCulture"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp" />
+
+                </LinearLayout>
+
+                <!--Eating habits-->
+                <LinearLayout
+                    android:id="@+id/llEatingHabits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text10RegularGrayStylePadding"
+                        android:text="@string/food_preference" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtEatingHabits"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp" />
+
+                </LinearLayout>
+
+                <!--Settle Location view-->
+                <LinearLayout
+                    android:id="@+id/llSettleLocationView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblSettleLocations"
+                            style="@style/Text10RegularGrayStylePadding"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="0dp"
+
+                            android:text="@string/settle_location" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtSettleLocations"
+                        style="@style/Text26BlackStyle"
+                        android:layout_marginTop="@dimen/_3sdp" />
+                </LinearLayout>
+
+                <!--Third Album Image-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llThirdAlbum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/imgThirdAlbum"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/dr_bg_add_photo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1.1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:placeholderImageScaleType="fitXY"
+                        app:roundedCornerRadius="@dimen/_22sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgThirdAlbumFilter"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/dr_ic_red_filter"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1.1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvThirdAlbumErrors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:overScrollMode="never"
+                        app:layout_constraintEnd_toStartOf="@+id/imgChangeThirdAlbum"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/raw_error_list" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgChangeThirdAlbum"
+                        style="@style/ImageSize20Style"
+                        android:layout_margin="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSave"
+                    style="@style/Button15RegularButtonPurpleStyle"
+                    android:layout_marginBottom="@dimen/_32sdp"
+                    android:background="@drawable/dr_bg_btn"
+                    android:hint="@string/save"
+                    android:textColor="@color/color_black"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnCross"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/dr_ic_cross" />
+
+    <LinearLayout
+        android:id="@+id/llSkipAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_2sdp"
+        android:visibility="gone"
+        tools:ignore="RelativeOverlap">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSkipAll"
+            style="@style/Text12RegularGrayStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skip_all"
+            android:textColor="@color/color_grey"
+            android:textSize="@dimen/_10sdp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:backgroundTint="@color/color_grey"
+            android:src="@drawable/dr_ic_skip" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

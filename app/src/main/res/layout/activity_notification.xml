@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".NotificationActivity">
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/rlAllNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customHeader"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:background="@drawable/dr_bg_grey_stroke_circle"
+        android:padding="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Text24BlackStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/btnAllNotifications"
+            android:text="@string/all_notifications"
+            android:textSize="@dimen/_20sdp" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/btnAllNotifications"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/switch_selector"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+    <!--Questions-->
+    <RelativeLayout
+        android:id="@+id/rlQuestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlAllNotifications"
+        android:layout_marginHorizontal="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Text24BlackStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_toStartOf="@+id/btnQuestions"
+            android:text="@string/questions"
+            android:textSize="@dimen/_20sdp" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/btnQuestions"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/switch_selector"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+    <!--Connections-->
+    <RelativeLayout
+        android:id="@+id/rlConnections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlQuestions"
+        android:layout_marginHorizontal="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Text24BlackStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_toStartOf="@+id/btnConnections"
+            android:text="@string/connections"
+            android:textSize="@dimen/_20sdp" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/btnConnections"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/switch_selector"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+    <!--Recommendations-->
+    <RelativeLayout
+        android:id="@+id/rlRecommendations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlConnections"
+        android:layout_marginHorizontal="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Text24BlackStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_toStartOf="@+id/btnRecommendations"
+            android:text="@string/recommendations"
+            android:textSize="@dimen/_20sdp" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/btnRecommendations"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/switch_selector"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+    <!--Messages-->
+    <RelativeLayout
+        android:id="@+id/rlMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlRecommendations"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Text24BlackStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_toStartOf="@+id/btnMessages"
+            android:text="@string/messages"
+            android:textSize="@dimen/_20sdp" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/btnMessages"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/switch_selector"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/llButtonView"
+        layout="@layout/bottom_view" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "84528934318",
+    "project_id": "common-friend-ab46e",
+    "storage_bucket": "common-friend-ab46e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84528934318:android:5f6f3fe747ddef1187ac3f",
+        "android_client_info": {
+          "package_name": "com.commonfriend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzprwJA67WUwMYiQ41gtAC68uFVuDCQIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_base_grey"
+    android:orientation="vertical"
+    tools:context=".PrivacyLegalActivity">
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnDone"
+        android:layout_below="@+id/customHeader"
+        android:layout_margin="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgFace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_feedback_holder" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtLabel"
+                style="@style/Text20RegularBlackStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_toEndOf="@+id/imgFace"
+                android:gravity="start"
+                android:paddingBottom="0dp"
+                android:text="@string/this_stays_between_us" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:background="@drawable/dr_bg_circle">
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtFeedback"
+                style="@style/Text20RegularPurpleStyle"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:fontFamily="@font/traditionalandexceptionalfont_regular"
+                android:gravity="start"
+                android:hint="@string/your_reasons"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:maxLines="4"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColor="@color/color_black"
+                android:textColorHint="@color/color_grey" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtWordCount"
+                style="@style/Text12RegularGrayStyle"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:text="@string/_100_words_left" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDone"
+        style="@style/bottomButtonStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@drawable/dr_bg_btn_light"
+        android:clickable="false"
+        android:text="@string/done_"
+        android:textColor="@color/color_white"
+        android:visibility="visible" />
+
+</RelativeLayout>
+

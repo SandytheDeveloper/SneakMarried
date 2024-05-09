@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_4sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/checkbox"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:tint="@color/color_black"
+        android:src="@drawable/dr_ic_sqaure_unfill" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtName"
+        style="@style/Text14BlueStyle"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_toEndOf="@+id/checkbox"
+        android:textColor="@color/color_black"
+        android:text="@string/mumbai" />
+
+
+</RelativeLayout>

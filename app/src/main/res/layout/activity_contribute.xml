@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_base_grey"
+    tools:context=".ContributeActivity">
+
+    <com.commonfriend.custom.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/llMsgView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customHeader"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_1sdp"
+                app:placeholderImage="@drawable/ic_chat_face"
+                app:roundAsCircle="true"
+                app:roundedCornerRadius="@dimen/_40sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtQuestionTitle"
+                style="@style/Text14BlueStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="@string/what_is_the_question"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFirstPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/dr_chat_sender_left_bg"
+            android:backgroundTint="@color/color_base_grey"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_18sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            tools:ignore="RtlSymmetry">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/dr_bg_base_grey_circle"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtQuestion"
+                    style="@style/Text14RegularBlackStyle"
+                    android:layout_height="@dimen/_112sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:digits=" 1234567890!@#$%^&amp;*()_+=qwertyuiopasdfghjklzxcvbnm,./;'[]\|}{:?QWERTYUIOPASDFGHJKLZXCVBNM"
+                    android:focusable="true"
+                    android:fontFamily="@font/traditionalandexceptionalfont_regular"
+                    android:gravity="start"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:maxLines="4"
+                    android:overScrollMode="always"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:scrollbarStyle="insideInset"
+                    android:textColor="@color/color_black"
+                    android:textColorHint="@color/color_grey"
+                    android:textSize="@dimen/_18sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtQuestionWordCount"
+                    style="@style/Text12RegularGrayStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="end"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="100 characters left"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnQuestionNext"
+                style="@style/bottomButtonStyle"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/dr_bg_btn_light"
+                android:clickable="false"
+                android:padding="0dp"
+                android:text="@string/next"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSecondPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/dr_chat_sender_left_bg"
+            android:backgroundTint="@color/color_base_grey"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_18sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:visibility="gone"
+            tools:ignore="RtlSymmetry">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_70sdp"
+                android:background="@drawable/dr_bg_base_grey_circle"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtOptionA"
+                    style="@style/Text14RegularBlackStyle"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:digits=" 1234567890!@#$%^&amp;*()_+=qwertyuiopasdfghjklzxcvbnm,./;'[]\|}{:?QWERTYUIOPASDFGHJKLZXCVBNM"
+                    android:focusable="true"
+                    android:fontFamily="@font/traditionalandexceptionalfont_regular"
+                    android:gravity="start"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:overScrollMode="always"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:scrollbarStyle="insideInset"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black"
+                    android:textColorHint="@color/color_grey"
+                    android:textSize="@dimen/_18sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtOptionAWordCount"
+                    style="@style/Text12RegularGrayStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="end"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="15 characters left"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOptionANext"
+                style="@style/bottomButtonStyle"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/dr_bg_btn_light"
+                android:clickable="false"
+                android:padding="0dp"
+                android:text="@string/next"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llThirdPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/dr_chat_sender_left_bg"
+            android:backgroundTint="@color/color_base_grey"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_18sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:visibility="gone"
+            tools:ignore="RtlSymmetry">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_70sdp"
+                android:background="@drawable/dr_bg_base_grey_circle"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtOptionB"
+                    style="@style/Text14RegularBlackStyle"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:digits=" 1234567890!@#$%^&amp;*()_+=qwertyuiopasdfghjklzxcvbnm,./;'[]\|}{:?QWERTYUIOPASDFGHJKLZXCVBNM"
+                    android:focusable="true"
+                    android:fontFamily="@font/traditionalandexceptionalfont_regular"
+                    android:gravity="start"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:overScrollMode="always"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:scrollbarStyle="insideInset"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black"
+                    android:textColorHint="@color/color_grey"
+                    android:textSize="@dimen/_18sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtOptionBWordCount"
+                    style="@style/Text12RegularGrayStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="end"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="15 characters left"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContribute"
+                style="@style/bottomButtonStyle"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/dr_bg_btn_light"
+                android:clickable="false"
+                android:padding="0dp"
+                android:text="@string/contribute"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
